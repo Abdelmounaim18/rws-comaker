@@ -1,0 +1,114 @@
+{
+	"SOAP:Envelope": {
+		"@xmlns:SOAP": "http://schemas.xmlsoap.org/soap/envelope/",
+		"SOAP:Body": {
+			"ndw:NdwMrm": {
+				"@xmlns:ndw": "http://schemas.ndw.nu/wsdl/NdwTmisMrm10/",
+				"ndw:exchange": {
+					"subscription": {
+						"subscriptionState": "active",
+						"updateMethod": "snapshot"
+					}
+				},
+				"minute_speed_and_flow_events": {
+					"@xmlns": "http://speed_and_flow.trafficmanagementinfo.publicatie.hwn.rws.nl/1.1",
+					"meta": {
+						"msg_id": {
+							"uuid": "e548608b-7e60-4685-b428-42820d7576e4"
+						},
+						"selection": null
+					},
+					"event": [
+						{
+							"ts_event": "2019-09-19T12:21:27.741Z",
+							"ts_state": "2019-09-19T11:40:53.853Z",
+							"measuring_point_id": {
+								"uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+							},
+							"lanelocation": {
+								"road": "A2",
+								"carriageway": "g",
+								"lane": "3",
+								"km": "64.242"
+							}
+						},
+						{
+							"ts_event": "2022-10-26T15:23:12.231Z",
+							"ts_state": "2022-10-26T15:23:00Z",
+							"measuring_point_id": {
+								"uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+							},
+							"avgspeed": { "kmph": "48" }
+						},
+						{
+							"ts_event": "2022-10-26T15:23:12.232Z",
+							"ts_state": "2022-10-26T15:23:00Z",
+							"measuring_point_id": {
+								"uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+							},
+							"flow": { "count": "31" }
+						},
+						{
+							"ts_event": "2019-09-19T12:30:45.241Z",
+							"ts_state": "2019-09-19T12:30:30.151Z",
+							"measuring_point_id": {
+								"uuid": "97a71051-ddb8-49f7-8f54-c348d86187c0"
+							},
+							"lanelocation": {
+								"road": "A13",
+								"carriageway": "L",
+								"lane": "3",
+								"km": "19.100"
+							}
+						},
+						{
+							"ts_event": "2022-10-26T15:23:19.506Z",
+							"ts_state": "2022-10-26T15:23:00Z",
+							"measuring_point_id": {
+								"uuid": "97a71051-ddb8-49f7-8f54-c348d86187c0"
+							},
+							"avgspeed": { "kmph": "74" }
+						},
+						{
+							"ts_event": "2022-10-26T15:23:19.507Z",
+							"ts_state": "2022-10-26T15:23:00Z",
+							"measuring_point_id": {
+								"uuid": "97a71051-ddb8-49f7-8f54-c348d86187c0"
+							},
+							"flow": { "count": "19" }
+						},
+						{
+							"ts_event": "2022-03-06T07:42:48.103Z",
+							"ts_state": "2022-03-06T07:42:38.610Z",
+							"measuring_point_id": {
+								"uuid": "e8876958-6c1a-4140-bb9e-a4f94371f096"
+							},
+							"lanelocation": {
+								"road": "A13",
+								"carriageway": "L",
+								"lane": "1",
+								"km": "14.700"
+							}
+						},
+						{
+							"ts_event": "2022-10-26T15:23:19.407Z",
+							"ts_state": "2022-10-26T15:23:00Z",
+							"measuring_point_id": {
+								"uuid": "e8876958-6c1a-4140-bb9e-a4f94371f096"
+							},
+							"avgspeed": { "kmph": "105" }
+						},
+						{
+							"ts_event": "2022-10-26T15:23:19.409Z",
+							"ts_state": "2022-10-26T15:23:00Z",
+							"measuring_point_id": {
+								"uuid": "e8876958-6c1a-4140-bb9e-a4f94371f096"
+							},
+							"flow": { "count": "23" }
+						}
+					]
+				}
+			}
+		}
+	}
+}

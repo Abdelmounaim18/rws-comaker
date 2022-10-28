@@ -1,0 +1,35 @@
+[
+    {
+        "ts_event": "2019-09-19T12:21:27.741Z", 
+        "ts_state": "2019-09-19T11:40:53.853Z", 
+        "measuring_point_id": {
+            "uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+            },
+            "lanelocation": {
+                "road": "A2", 
+                "carriageway": "g", 
+                "lane": "3", 
+                "km": "64.242"
+                }
+    }, 
+    {
+        "ts_event": "2022-10-26T15:23:12.231Z", 
+        "ts_state": "2022-10-26T15:23:00Z", 
+        "measuring_point_id": {
+            "uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+            }, 
+            "avgspeed": {
+                "kmph": "48"
+            }
+    }, 
+    {
+        "ts_event": "2022-10-26T15:23:12.232Z", 
+        "ts_state": "2022-10-26T15:23:00Z", 
+        "measuring_point_id": {
+            "uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+            }, 
+            "flow": {
+                "count": "31"
+                }
+    }
+]

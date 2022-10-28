@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"ts_event": "2022-10-26T15:23:12.232Z",
+			"measuring_point_id": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc",
+			"road": "A2",
+			"avgspeed": "48" ,
+			"flow_count": "31"
+		},
+		{
+			"ts_event": "2022-10-26T15:23:12.232Z",
+			"measuring_point_id": "4963e9af9383-88c9-2d7f-38aa1d9c33cc",
+			"road": "A4",
+			"avgspeed": "89" ,
+			"flow_count": "12"
+		},
+		{
+			"ts_event": "2022-10-26T15:23:12.232Z",
+			"measuring_point_id": "2d7f-e9af9383-38aa1d9c33cc-4963-88c9",
+			"road": "A10",
+			"avgspeed": "12" ,
+			"flow_count": "56"
+		}
+	]
+}
