@@ -1,0 +1,13 @@
+{
+	"ts_event": "2022-10-28T17:10:10.929Z",
+	"ts_state": "2022-10-28T17:10:00Z",
+	"measuring_point_id": { "uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc" },
+	"lanelocation": {
+		"road": "A2",
+		"carriageway": "g",
+		"lane": "3",
+		"km": "64.242"
+	},
+	"avgspeed": { "kmph": "97" },
+	"flow": { "count": "6" }
+}
