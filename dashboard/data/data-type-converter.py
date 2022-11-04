@@ -51,30 +51,55 @@ event_dict = {}
 # event_dict["measurements"] = []
 
 
+# find all unique roads and create a dict for each road
+# for event in events:
+#     try:
+#         road_name = event["lanelocation"]["road"]
+#         event_dict[road_name] = []
+#     except:
+#         pass
+
+# # combine all measurements for each road into a list and add it to the dict
+# for event in events:
+#     try:
+#         road_name = event["lanelocation"]["road"]
+#         event_dict[road_name].append(event)
+#     except:
+#         pass
+
+# combine avg speed and avg flow for each event in events and add it to the dict
+
+
+
 for event in events:
     try:
         road = event["lanelocation"]["road"]
         event_dict[road] = []
         measuring_point_id = event["measuring_point_id"]["uuid"]
-
-        try:
-            if not avgspeed = event["avgspeed"]["kmph"]
-        except:
-            pass
-        try:
-            flow_count = event["flow"]["count"]
-        except:
-            pass
-
-      
-
         # event_dict[road][event["measuring_point_id"]["uuid"]] = {"speed": event["avgspeed"]["kmph"], "flow": event["flow"]["count"]}
     except:
         next
+    avgspeed = None
+    flow_count = None
+    try:
+        avgspeed = event["avgspeed"]["kmph"]
+    except:
+        avgspeed = None
+
+    try:
+        flow_count = event["flow"]["count"]
+    except:
+        flow_count = None
     
-    event_dict[road].append({
-            "id": measuring_point_id,
-            "avgspeed": avgspeed,
+    if measuring_point_id not in event_dict[road]:
+        event_dict[road].append(measuring_point_id)
+
+    if avgspeed:
+        event_dict[road].append({
+            "avgspeed": avgspeed
+            })
+    if flow_count:
+        event_dict[road].append({
             "flow_count": flow_count
             })
     

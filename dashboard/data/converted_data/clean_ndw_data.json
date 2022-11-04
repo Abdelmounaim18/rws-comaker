@@ -1,910 +1,437 @@
 {
     "A2": [
+        "1e3f2ab7-c597-4bfc-a95d-d56c94682d46",
         {
-            "id": "1e3f2ab7-c597-4bfc-a95d-d56c94682d46",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "107"
         },
         {
-            "id": "1e3f2ab7-c597-4bfc-a95d-d56c94682d46",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "1e3f2ab7-c597-4bfc-a95d-d56c94682d46",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "14"
         }
     ],
     "A13": [
-        {
-            "id": "4968f4d5-0493-4e68-b50b-ef66c1929143",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "4968f4d5-0493-4e68-b50b-ef66c1929143",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "4968f4d5-0493-4e68-b50b-ef66c1929143",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "4968f4d5-0493-4e68-b50b-ef66c1929143"
     ],
     "A28": [
+        "deeb0dc7-769d-43b6-98b0-b9dbc7e67f55",
         {
-            "id": "deeb0dc7-769d-43b6-98b0-b9dbc7e67f55",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "128"
         },
         {
-            "id": "deeb0dc7-769d-43b6-98b0-b9dbc7e67f55",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "deeb0dc7-769d-43b6-98b0-b9dbc7e67f55",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "8"
         }
     ],
     "A15": [
+        "cb2ba3e0-996c-47e3-8a0c-24cf8cdb6ba1",
         {
-            "id": "cb2ba3e0-996c-47e3-8a0c-24cf8cdb6ba1",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "112"
         },
         {
-            "id": "cb2ba3e0-996c-47e3-8a0c-24cf8cdb6ba1",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "cb2ba3e0-996c-47e3-8a0c-24cf8cdb6ba1",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "10"
         }
     ],
     "A1": [
-        {
-            "id": "7e055fe7-040b-4472-8a5f-04964893d839",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "7e055fe7-040b-4472-8a5f-04964893d839"
     ],
     "A99": [
-        {
-            "id": "3be1729e-f09f-4433-a251-c12827b2c6a6",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "3be1729e-f09f-4433-a251-c12827b2c6a6",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "3be1729e-f09f-4433-a251-c12827b2c6a6",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "3be1729e-f09f-4433-a251-c12827b2c6a6"
     ],
     "A58": [
+        "b0892077-c77d-402b-bc5d-c1f43d7aa86e",
         {
-            "id": "b0892077-c77d-402b-bc5d-c1f43d7aa86e",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "99"
         },
         {
-            "id": "b0892077-c77d-402b-bc5d-c1f43d7aa86e",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "b0892077-c77d-402b-bc5d-c1f43d7aa86e",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "12"
         }
     ],
     "A12": [
+        "80e36976-44a5-48ee-9700-2faadaebf87e",
         {
-            "id": "80e36976-44a5-48ee-9700-2faadaebf87e",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "99"
         },
         {
-            "id": "80e36976-44a5-48ee-9700-2faadaebf87e",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "80e36976-44a5-48ee-9700-2faadaebf87e",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "20"
         }
     ],
     "A20": [
+        "36ef2b34-74ad-432e-9672-bab17f188664",
         {
-            "id": "36ef2b34-74ad-432e-9672-bab17f188664",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "109"
         },
         {
-            "id": "36ef2b34-74ad-432e-9672-bab17f188664",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "36ef2b34-74ad-432e-9672-bab17f188664",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "10"
         }
     ],
     "A6": [
+        "98253ee0-9376-45ad-a845-6bae1013dc0a",
         {
-            "id": "98253ee0-9376-45ad-a845-6bae1013dc0a",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "113"
         },
         {
-            "id": "98253ee0-9376-45ad-a845-6bae1013dc0a",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "98253ee0-9376-45ad-a845-6bae1013dc0a",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "2"
         }
     ],
     "A27": [
+        "9bff0330-c366-4d35-83d9-6f418ad18fad",
         {
-            "id": "9bff0330-c366-4d35-83d9-6f418ad18fad",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "107"
         },
         {
-            "id": "9bff0330-c366-4d35-83d9-6f418ad18fad",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "9bff0330-c366-4d35-83d9-6f418ad18fad",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "39"
         }
     ],
     "A5": [
+        "f6ed28f6-7e2d-4d0e-b850-85c3bbe6143c",
         {
-            "id": "f6ed28f6-7e2d-4d0e-b850-85c3bbe6143c",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "105"
         },
         {
-            "id": "f6ed28f6-7e2d-4d0e-b850-85c3bbe6143c",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "f6ed28f6-7e2d-4d0e-b850-85c3bbe6143c",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "17"
         }
     ],
     "A50": [
+        "3a1046c7-469d-400a-942d-d2199f69dcc5",
         {
-            "id": "3a1046c7-469d-400a-942d-d2199f69dcc5",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "98"
         },
         {
-            "id": "3a1046c7-469d-400a-942d-d2199f69dcc5",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "3a1046c7-469d-400a-942d-d2199f69dcc5",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "5"
         }
     ],
     "A10": [
+        "a741c6d1-7950-4384-9d35-8d8df353c750",
         {
-            "id": "a741c6d1-7950-4384-9d35-8d8df353c750",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "124"
         },
         {
-            "id": "a741c6d1-7950-4384-9d35-8d8df353c750",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "a741c6d1-7950-4384-9d35-8d8df353c750",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "4"
         }
     ],
     "A9": [
+        "49c10cd1-3029-4367-a557-010d5eb1334a",
         {
-            "id": "49c10cd1-3029-4367-a557-010d5eb1334a",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "101"
         },
         {
-            "id": "49c10cd1-3029-4367-a557-010d5eb1334a",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "49c10cd1-3029-4367-a557-010d5eb1334a",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "12"
         }
     ],
     "A67": [
+        "dac683ed-8023-4f67-a337-1a14dd898c26",
         {
-            "id": "dac683ed-8023-4f67-a337-1a14dd898c26",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "101"
         },
         {
-            "id": "dac683ed-8023-4f67-a337-1a14dd898c26",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "dac683ed-8023-4f67-a337-1a14dd898c26",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "7"
         }
     ],
     "A7": [
+        "cd5d74ab-0176-4505-b5f5-4f3b9e42e6fa",
         {
-            "id": "cd5d74ab-0176-4505-b5f5-4f3b9e42e6fa",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "116"
         },
         {
-            "id": "cd5d74ab-0176-4505-b5f5-4f3b9e42e6fa",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "cd5d74ab-0176-4505-b5f5-4f3b9e42e6fa",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "18"
         }
     ],
     "A16": [
+        "643096b9-897f-44ec-b5b8-ec1d826f1b39",
         {
-            "id": "643096b9-897f-44ec-b5b8-ec1d826f1b39",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "69"
         },
         {
-            "id": "643096b9-897f-44ec-b5b8-ec1d826f1b39",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "643096b9-897f-44ec-b5b8-ec1d826f1b39",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "6"
         }
     ],
     "A22": [
+        "24d67ca1-c58f-41b8-b2af-9c8e1f1592b0",
         {
-            "id": "24d67ca1-c58f-41b8-b2af-9c8e1f1592b0",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "90"
         },
         {
-            "id": "24d67ca1-c58f-41b8-b2af-9c8e1f1592b0",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "24d67ca1-c58f-41b8-b2af-9c8e1f1592b0",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "14"
         }
     ],
     "A4": [
+        "a7afeb35-54b4-4a5d-8e38-e8c7e483aff9",
         {
-            "id": "a7afeb35-54b4-4a5d-8e38-e8c7e483aff9",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "117"
         },
         {
-            "id": "a7afeb35-54b4-4a5d-8e38-e8c7e483aff9",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "a7afeb35-54b4-4a5d-8e38-e8c7e483aff9",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "13"
         }
     ],
     "A44": [
-        {
-            "id": "8c413213-b14a-4bf2-9051-2d703177b70c",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "8c413213-b14a-4bf2-9051-2d703177b70c",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "8c413213-b14a-4bf2-9051-2d703177b70c",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "8c413213-b14a-4bf2-9051-2d703177b70c"
     ],
     "A76": [
+        "3d653b24-22cf-4134-a7a3-726a138f5c0f",
         {
-            "id": "3d653b24-22cf-4134-a7a3-726a138f5c0f",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "96"
         },
         {
-            "id": "3d653b24-22cf-4134-a7a3-726a138f5c0f",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "3d653b24-22cf-4134-a7a3-726a138f5c0f",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "5"
         }
     ],
     "A29": [
+        "497e437f-94e0-47a9-be46-d8c5b141713e",
         {
-            "id": "497e437f-94e0-47a9-be46-d8c5b141713e",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "136"
         },
         {
-            "id": "497e437f-94e0-47a9-be46-d8c5b141713e",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "497e437f-94e0-47a9-be46-d8c5b141713e",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "2"
         }
     ],
     "A242": [
+        "a0c8e3c7-4ce5-484f-8973-b92cc02e4aa7",
         {
-            "id": "a0c8e3c7-4ce5-484f-8973-b92cc02e4aa7",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "107"
         },
         {
-            "id": "a0c8e3c7-4ce5-484f-8973-b92cc02e4aa7",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "a0c8e3c7-4ce5-484f-8973-b92cc02e4aa7",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "1"
         }
     ],
     "A73": [
+        "9b5b84b6-4253-4b2a-999d-8ceae6a21abf",
         {
-            "id": "9b5b84b6-4253-4b2a-999d-8ceae6a21abf",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "121"
         },
         {
-            "id": "9b5b84b6-4253-4b2a-999d-8ceae6a21abf",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "9b5b84b6-4253-4b2a-999d-8ceae6a21abf",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "2"
         }
     ],
     "A35": [
+        "eae5f52c-aae1-4184-a882-431550a43065",
         {
-            "id": "eae5f52c-aae1-4184-a882-431550a43065",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "93"
         },
         {
-            "id": "eae5f52c-aae1-4184-a882-431550a43065",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "eae5f52c-aae1-4184-a882-431550a43065",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "11"
         }
     ],
     "A18": [
+        "b5e6a5d7-4782-4965-9147-95e6db3a3fe0",
         {
-            "id": "b5e6a5d7-4782-4965-9147-95e6db3a3fe0",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "114"
         },
         {
-            "id": "b5e6a5d7-4782-4965-9147-95e6db3a3fe0",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "b5e6a5d7-4782-4965-9147-95e6db3a3fe0",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "9"
         }
     ],
     "N14": [
+        "527db9b7-2389-4139-9355-f9fadc3bc27e",
         {
-            "id": "527db9b7-2389-4139-9355-f9fadc3bc27e",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "66"
         },
         {
-            "id": "527db9b7-2389-4139-9355-f9fadc3bc27e",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "527db9b7-2389-4139-9355-f9fadc3bc27e",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "14"
         }
     ],
     "A222": [
+        "af952f03-20bc-403b-bce4-220e59f3d9cf",
         {
-            "id": "af952f03-20bc-403b-bce4-220e59f3d9cf",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "109"
         },
         {
-            "id": "af952f03-20bc-403b-bce4-220e59f3d9cf",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "af952f03-20bc-403b-bce4-220e59f3d9cf",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "6"
         }
     ],
     "A79": [
+        "8c228268-ef27-4118-9f0b-a74ee1528572",
         {
-            "id": "8c228268-ef27-4118-9f0b-a74ee1528572",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "100"
         },
         {
-            "id": "8c228268-ef27-4118-9f0b-a74ee1528572",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "8c228268-ef27-4118-9f0b-a74ee1528572",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "7"
         }
     ],
     "A325": [
+        "c200f2be-a85c-4373-89a7-10a895db2882",
         {
-            "id": "c200f2be-a85c-4373-89a7-10a895db2882",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "120"
         },
         {
-            "id": "c200f2be-a85c-4373-89a7-10a895db2882",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "c200f2be-a85c-4373-89a7-10a895db2882",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "12"
         }
     ],
     "N2": [
+        "6e561b32-2d61-478b-b82e-cd3870d1674b",
         {
-            "id": "6e561b32-2d61-478b-b82e-cd3870d1674b",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "77"
         },
         {
-            "id": "6e561b32-2d61-478b-b82e-cd3870d1674b",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "6e561b32-2d61-478b-b82e-cd3870d1674b",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "2"
         }
     ],
     "A8": [
+        "bb0c7985-c7a2-47cc-9842-29149a9916e3",
         {
-            "id": "bb0c7985-c7a2-47cc-9842-29149a9916e3",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "106"
         },
         {
-            "id": "bb0c7985-c7a2-47cc-9842-29149a9916e3",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "bb0c7985-c7a2-47cc-9842-29149a9916e3",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "12"
         }
     ],
     "N15": [
+        "19b799fe-e92d-478e-bab3-32cc62fd3909",
         {
-            "id": "19b799fe-e92d-478e-bab3-32cc62fd3909",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "85"
         },
         {
-            "id": "19b799fe-e92d-478e-bab3-32cc62fd3909",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "19b799fe-e92d-478e-bab3-32cc62fd3909",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "3"
         }
     ],
     "N434": [
-        {
-            "id": "198db771-6f08-4fd4-849c-b4ab7df5bcf9",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "198db771-6f08-4fd4-849c-b4ab7df5bcf9",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "198db771-6f08-4fd4-849c-b4ab7df5bcf9",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "198db771-6f08-4fd4-849c-b4ab7df5bcf9"
     ],
     "A201": [
-        {
-            "id": "4c53b2f2-8f65-4f36-9bf5-92ba802bc8e4",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "4c53b2f2-8f65-4f36-9bf5-92ba802bc8e4",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "4c53b2f2-8f65-4f36-9bf5-92ba802bc8e4",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "4c53b2f2-8f65-4f36-9bf5-92ba802bc8e4"
     ],
     "A59": [
+        "f861ae3b-d9c3-4d07-9f97-5a4855712c2d",
         {
-            "id": "f861ae3b-d9c3-4d07-9f97-5a4855712c2d",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "94"
         },
         {
-            "id": "f861ae3b-d9c3-4d07-9f97-5a4855712c2d",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "f861ae3b-d9c3-4d07-9f97-5a4855712c2d",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "8"
         }
     ],
     "N205": [
+        "22ebbc37-56e5-40e3-9905-68111fb20d20",
         {
-            "id": "22ebbc37-56e5-40e3-9905-68111fb20d20",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "101"
         },
         {
-            "id": "22ebbc37-56e5-40e3-9905-68111fb20d20",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "22ebbc37-56e5-40e3-9905-68111fb20d20",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "8"
         }
     ],
     "A783": [
+        "f6eb47de-0be9-494b-9c48-aa639e07a8d5",
         {
-            "id": "f6eb47de-0be9-494b-9c48-aa639e07a8d5",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "81"
         },
         {
-            "id": "f6eb47de-0be9-494b-9c48-aa639e07a8d5",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "f6eb47de-0be9-494b-9c48-aa639e07a8d5",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "5"
         }
     ],
     "A32": [
+        "d9c55a19-6228-4f50-be41-6d02bc0e3828",
         {
-            "id": "d9c55a19-6228-4f50-be41-6d02bc0e3828",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "135"
         },
         {
-            "id": "d9c55a19-6228-4f50-be41-6d02bc0e3828",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "d9c55a19-6228-4f50-be41-6d02bc0e3828",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "3"
         }
     ],
     "N325": [
+        "8e1ebf1b-4873-401f-99c5-d2a989e305ce",
         {
-            "id": "8e1ebf1b-4873-401f-99c5-d2a989e305ce",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "76"
         },
         {
-            "id": "8e1ebf1b-4873-401f-99c5-d2a989e305ce",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "8e1ebf1b-4873-401f-99c5-d2a989e305ce",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "20"
         }
     ],
     "A160": [
-        {
-            "id": "574d6476-aa57-4543-9e47-b142ca43c76d",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "574d6476-aa57-4543-9e47-b142ca43c76d",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "574d6476-aa57-4543-9e47-b142ca43c76d",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "574d6476-aa57-4543-9e47-b142ca43c76d"
     ],
     "N11": [
+        "2c11a3df-3879-4221-b8b7-e1e7e2ea0090",
         {
-            "id": "2c11a3df-3879-4221-b8b7-e1e7e2ea0090",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "96"
         },
         {
-            "id": "2c11a3df-3879-4221-b8b7-e1e7e2ea0090",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "2c11a3df-3879-4221-b8b7-e1e7e2ea0090",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "10"
         }
     ],
     "N59": [
+        "4a888267-e77d-42d8-89f4-c85a8230c8fc",
         {
-            "id": "4a888267-e77d-42d8-89f4-c85a8230c8fc",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "4a888267-e77d-42d8-89f4-c85a8230c8fc",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "4a888267-e77d-42d8-89f4-c85a8230c8fc",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "0"
         }
     ],
     "A17": [
+        "93146226-9ad9-4045-9d9d-05306d463482",
         {
-            "id": "93146226-9ad9-4045-9d9d-05306d463482",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "101"
         },
         {
-            "id": "93146226-9ad9-4045-9d9d-05306d463482",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "93146226-9ad9-4045-9d9d-05306d463482",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "12"
         }
     ],
     "A65": [
+        "466d2053-bcf0-448f-a1aa-a24a1800fdcf",
         {
-            "id": "466d2053-bcf0-448f-a1aa-a24a1800fdcf",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "107"
         },
         {
-            "id": "466d2053-bcf0-448f-a1aa-a24a1800fdcf",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "466d2053-bcf0-448f-a1aa-a24a1800fdcf",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "5"
         }
     ],
     "A208": [
+        "1a20419f-8e48-4447-98b2-853a9077635b",
         {
-            "id": "1a20419f-8e48-4447-98b2-853a9077635b",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "96"
         },
         {
-            "id": "1a20419f-8e48-4447-98b2-853a9077635b",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "1a20419f-8e48-4447-98b2-853a9077635b",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "6"
         }
     ],
     "A30": [
+        "f4125512-dbc5-4aa8-ac9d-24db1adad110",
         {
-            "id": "f4125512-dbc5-4aa8-ac9d-24db1adad110",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "99"
         },
         {
-            "id": "f4125512-dbc5-4aa8-ac9d-24db1adad110",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "f4125512-dbc5-4aa8-ac9d-24db1adad110",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "9"
         }
     ],
     "A38": [
+        "da35acc2-94c4-4ac4-b268-6ddb4db7c725",
         {
-            "id": "da35acc2-94c4-4ac4-b268-6ddb4db7c725",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "92"
         },
         {
-            "id": "da35acc2-94c4-4ac4-b268-6ddb4db7c725",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "da35acc2-94c4-4ac4-b268-6ddb4db7c725",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "1"
         }
     ],
     "N35": [
+        "6df678bc-2ac0-4d61-9a9b-83d7680c690a",
         {
-            "id": "6df678bc-2ac0-4d61-9a9b-83d7680c690a",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "86"
         },
         {
-            "id": "6df678bc-2ac0-4d61-9a9b-83d7680c690a",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "6df678bc-2ac0-4d61-9a9b-83d7680c690a",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "4"
         }
     ],
     "N7": [
-        {
-            "id": "b51de77d-2f3f-4972-8ae5-fd19312289ef",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "b51de77d-2f3f-4972-8ae5-fd19312289ef",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "b51de77d-2f3f-4972-8ae5-fd19312289ef",
-            "avgspeed": null,
-            "flow_count": null
-        }
+        "b51de77d-2f3f-4972-8ae5-fd19312289ef"
     ],
     "A205": [
+        "05ea6747-eafd-4fef-af0b-587dc55d88ad",
         {
-            "id": "05ea6747-eafd-4fef-af0b-587dc55d88ad",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "99"
         },
         {
-            "id": "05ea6747-eafd-4fef-af0b-587dc55d88ad",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "05ea6747-eafd-4fef-af0b-587dc55d88ad",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "8"
         }
     ],
     "N348": [
+        "49330b1f-364c-4ec7-a3ed-dddb43adf2bc",
         {
-            "id": "49330b1f-364c-4ec7-a3ed-dddb43adf2bc",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "56"
         },
         {
-            "id": "49330b1f-364c-4ec7-a3ed-dddb43adf2bc",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "49330b1f-364c-4ec7-a3ed-dddb43adf2bc",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "10"
         }
     ],
     "N322": [
+        "54aae03a-a441-4ed3-91cd-d8a4cb431ffa",
         {
-            "id": "54aae03a-a441-4ed3-91cd-d8a4cb431ffa",
-            "avgspeed": null,
-            "flow_count": null
+            "avgspeed": "87"
         },
         {
-            "id": "54aae03a-a441-4ed3-91cd-d8a4cb431ffa",
-            "avgspeed": null,
-            "flow_count": null
-        },
-        {
-            "id": "54aae03a-a441-4ed3-91cd-d8a4cb431ffa",
-            "avgspeed": null,
-            "flow_count": null
+            "flow_count": "10"
         }
     ]
 }
