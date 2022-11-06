@@ -68,7 +68,8 @@ def get_events_with_same_measuring_point_id(measuring_point_id):
 
 
 matched_events = []
-combined_events = []
+combined_events = {}
+combined_events["events"] = []
 
 for measuring_point_id in get_unique_measuring_point_ids():
     matched_events.append(get_events_with_same_measuring_point_id(measuring_point_id))
@@ -77,7 +78,7 @@ for measuring_point_id in get_unique_measuring_point_ids():
 for i in range(len(matched_events)):
     try:
         merged_event = matched_events[i][0] | matched_events[i][1] | matched_events[i][2]
-        combined_events.append(merged_event)
+        combined_events["events"].append(merged_event)
     except:
         pass
 
