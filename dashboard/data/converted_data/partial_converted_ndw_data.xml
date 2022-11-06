@@ -13,7 +13,7 @@
                     <msg_id>
                         <uuid>90601ec0-109d-4fe3-b57e-8962e7d7360e</uuid>
                     </msg_id>
-                    <selection />
+                    <selection/>
                 </meta>
                 <event>
                     <ts_event>2019-09-19T12:21:27.741Z</ts_event>
@@ -233,7 +233,7 @@
                         <uuid>e1c93e64-c2e4-47e3-a857-308c49fe0b85</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -243,7 +243,7 @@
                         <uuid>e1c93e64-c2e4-47e3-a857-308c49fe0b85</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -642,7 +642,7 @@
                         <uuid>d67e6347-f6b5-4425-9c2b-dbf320e4e08b</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <no_traffic />
+                        <no_traffic/>
                     </avgspeed>
                 </event>
                 <event>
@@ -1005,7 +1005,7 @@
                         <uuid>e367b601-c248-416e-9bd8-ab42b0f7d61f</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -1015,7 +1015,7 @@
                         <uuid>e367b601-c248-416e-9bd8-ab42b0f7d61f</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -1348,7 +1348,7 @@
                         <uuid>f8051726-49c9-4e27-9b49-d8510199aa70</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -1358,7 +1358,7 @@
                         <uuid>f8051726-49c9-4e27-9b49-d8510199aa70</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -1513,7 +1513,7 @@
                         <uuid>ae28bc27-1549-414c-a8d2-474cb0de190c</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <no_traffic />
+                        <no_traffic/>
                     </avgspeed>
                 </event>
                 <event>
@@ -1678,7 +1678,7 @@
                         <uuid>6ef1be61-4a06-4d8c-b2da-bde40b38d351</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -1688,7 +1688,7 @@
                         <uuid>6ef1be61-4a06-4d8c-b2da-bde40b38d351</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -1909,7 +1909,7 @@
                         <uuid>ff773d3f-21a4-4fc4-9c08-51ec031de28b</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -1919,7 +1919,7 @@
                         <uuid>ff773d3f-21a4-4fc4-9c08-51ec031de28b</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -2074,7 +2074,7 @@
                         <uuid>12a960cb-1d20-4517-b7f5-aebcf43e477c</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -2084,7 +2084,7 @@
                         <uuid>12a960cb-1d20-4517-b7f5-aebcf43e477c</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -2239,7 +2239,7 @@
                         <uuid>00ed30b1-c06c-4a28-8af0-0c8751fa6dfe</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -2249,7 +2249,7 @@
                         <uuid>00ed30b1-c06c-4a28-8af0-0c8751fa6dfe</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -3836,7 +3836,7 @@
                         <uuid>510c8c5d-c2c5-4782-9837-fd869ffaa2ed</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -3846,7 +3846,7 @@
                         <uuid>510c8c5d-c2c5-4782-9837-fd869ffaa2ed</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -4034,7 +4034,7 @@
                         <uuid>0c1e10e8-ca1b-4498-b512-e63dabb1ea5a</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -4044,7 +4044,7 @@
                         <uuid>0c1e10e8-ca1b-4498-b512-e63dabb1ea5a</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -4793,7 +4793,7 @@
                         <uuid>5e488b9c-b59a-4171-a1c3-218c3d4b1ce8</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -4803,7 +4803,7 @@
                         <uuid>5e488b9c-b59a-4171-a1c3-218c3d4b1ce8</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -5367,7 +5367,7 @@
                         <uuid>1642d6ad-eca8-45a8-ac65-a0a5dccb3909</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -5377,7 +5377,7 @@
                         <uuid>1642d6ad-eca8-45a8-ac65-a0a5dccb3909</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -5512,7 +5512,7 @@
                         <uuid>96f1f926-5092-4db9-ad6d-776d80b028bb</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -5522,7 +5522,7 @@
                         <uuid>96f1f926-5092-4db9-ad6d-776d80b028bb</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -5591,7 +5591,7 @@
                         <uuid>51c7851a-70ee-41d4-b1f3-6f631a4221cb</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -5601,7 +5601,7 @@
                         <uuid>51c7851a-70ee-41d4-b1f3-6f631a4221cb</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -5657,7 +5657,7 @@
                         <uuid>76d4c9f6-e90c-40e9-aa68-3731d2edd872</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -5667,7 +5667,7 @@
                         <uuid>76d4c9f6-e90c-40e9-aa68-3731d2edd872</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -5690,7 +5690,7 @@
                         <uuid>b0da7f47-03de-4951-b1bc-67f6b4496613</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <no_traffic />
+                        <no_traffic/>
                     </avgspeed>
                 </event>
                 <event>
@@ -5756,7 +5756,7 @@
                         <uuid>cdc3956f-c056-4a6c-b3a2-968ba7995123</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <no_traffic />
+                        <no_traffic/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6053,7 +6053,7 @@
                         <uuid>7bc4b4a1-46b4-4b0a-88d0-56e03c90a16a</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6063,7 +6063,7 @@
                         <uuid>7bc4b4a1-46b4-4b0a-88d0-56e03c90a16a</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -6185,7 +6185,7 @@
                         <uuid>eddc3276-9952-4c8d-bd07-024fe93a5d10</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <no_traffic />
+                        <no_traffic/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6317,7 +6317,7 @@
                         <uuid>11ec2622-94e0-4ac3-abde-3f77accc5097</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6327,7 +6327,7 @@
                         <uuid>11ec2622-94e0-4ac3-abde-3f77accc5097</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -6416,7 +6416,7 @@
                         <uuid>3bb4da57-0e85-4061-b718-1087e42ded95</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6426,7 +6426,7 @@
                         <uuid>3bb4da57-0e85-4061-b718-1087e42ded95</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -6581,7 +6581,7 @@
                         <uuid>8b0c1494-95c3-4fda-bbef-44e4a5499ee5</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6680,7 +6680,7 @@
                         <uuid>35442a51-c38f-46cf-a9c6-1900eaebc150</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6690,7 +6690,7 @@
                         <uuid>35442a51-c38f-46cf-a9c6-1900eaebc150</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -6713,7 +6713,7 @@
                         <uuid>4ec4b561-e02a-4b37-9627-4c096f01e4bd</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6723,7 +6723,7 @@
                         <uuid>4ec4b561-e02a-4b37-9627-4c096f01e4bd</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -6878,7 +6878,7 @@
                         <uuid>c503156b-0470-40e4-99b9-b81ecc8378f6</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -6888,7 +6888,7 @@
                         <uuid>c503156b-0470-40e4-99b9-b81ecc8378f6</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -7386,7 +7386,7 @@
                         <uuid>afbb67e1-29ed-4a90-bed7-3fa0ad19860b</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -7396,7 +7396,7 @@
                         <uuid>afbb67e1-29ed-4a90-bed7-3fa0ad19860b</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -7584,7 +7584,7 @@
                         <uuid>fc186fcd-28be-4333-878d-0f197c1b8d84</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -7594,7 +7594,7 @@
                         <uuid>fc186fcd-28be-4333-878d-0f197c1b8d84</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -7683,7 +7683,7 @@
                         <uuid>7c60d1e9-656f-4bff-9ffe-6fd9d12da34a</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -7693,7 +7693,7 @@
                         <uuid>7c60d1e9-656f-4bff-9ffe-6fd9d12da34a</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -7815,7 +7815,7 @@
                         <uuid>7f69c1bb-abec-4788-8e1d-f5e84244ea5b</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -7825,7 +7825,7 @@
                         <uuid>7f69c1bb-abec-4788-8e1d-f5e84244ea5b</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -7894,7 +7894,7 @@
                         <uuid>4567dae9-3722-48c8-a37a-8bf21cf8d54a</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -7904,7 +7904,7 @@
                         <uuid>4567dae9-3722-48c8-a37a-8bf21cf8d54a</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -8224,7 +8224,7 @@
                         <uuid>1116dbaf-f095-49d8-b84a-4b2ed0efd10c</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -8234,7 +8234,7 @@
                         <uuid>1116dbaf-f095-49d8-b84a-4b2ed0efd10c</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -8257,7 +8257,7 @@
                         <uuid>fe0c4400-2195-4e6a-a1d6-d9ef04bea801</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -8267,7 +8267,7 @@
                         <uuid>fe0c4400-2195-4e6a-a1d6-d9ef04bea801</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -8983,7 +8983,7 @@
                         <uuid>95d1554d-f1fb-4826-8acb-9535a5dfc2fc</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -8993,7 +8993,7 @@
                         <uuid>95d1554d-f1fb-4826-8acb-9535a5dfc2fc</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -9227,7 +9227,7 @@
                         <uuid>153b57b0-0590-485e-93c4-b633f7e2dcf9</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -9359,7 +9359,7 @@
                         <uuid>6717daf7-7ca7-49f0-9209-6cff29cbde39</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -9369,7 +9369,7 @@
                         <uuid>6717daf7-7ca7-49f0-9209-6cff29cbde39</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -9524,7 +9524,7 @@
                         <uuid>e80219ac-700a-4a51-ad49-363696bb478a</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <no_traffic />
+                        <no_traffic/>
                     </avgspeed>
                 </event>
                 <event>
@@ -9946,7 +9946,7 @@
                         <uuid>d249dd0b-5bb6-4439-9476-929b9d5f8ab0</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -9956,7 +9956,7 @@
                         <uuid>d249dd0b-5bb6-4439-9476-929b9d5f8ab0</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -10078,7 +10078,7 @@
                         <uuid>5f4e6950-18d7-4e0c-b3c3-2f2a0508f8f1</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -10144,7 +10144,7 @@
                         <uuid>6da4b144-e4d8-4ce6-b336-d5a75fffcc69</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -10154,7 +10154,7 @@
                         <uuid>6da4b144-e4d8-4ce6-b336-d5a75fffcc69</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -10276,7 +10276,7 @@
                         <uuid>353b09f6-8939-4724-bcaf-5c4ef32560c9</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -10286,7 +10286,7 @@
                         <uuid>353b09f6-8939-4724-bcaf-5c4ef32560c9</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -10837,7 +10837,7 @@
                         <uuid>9747a010-c180-40cc-9483-9cffb0f80f6b</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -10847,7 +10847,7 @@
                         <uuid>9747a010-c180-40cc-9483-9cffb0f80f6b</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -11233,7 +11233,7 @@
                         <uuid>14bc164a-0fc0-46e0-8236-6efcf958dc47</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -11243,7 +11243,7 @@
                         <uuid>14bc164a-0fc0-46e0-8236-6efcf958dc47</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
@@ -11563,7 +11563,7 @@
                         <uuid>bd3fd53b-b463-47bb-8735-c05cbcdc6271</uuid>
                     </measuring_point_id>
                     <avgspeed>
-                        <unknown />
+                        <unknown/>
                     </avgspeed>
                 </event>
                 <event>
@@ -11573,7 +11573,7 @@
                         <uuid>bd3fd53b-b463-47bb-8735-c05cbcdc6271</uuid>
                     </measuring_point_id>
                     <flow>
-                        <unknown />
+                        <unknown/>
                     </flow>
                 </event>
                 <event>
