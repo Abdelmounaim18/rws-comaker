@@ -4,7 +4,7 @@ import psycopg2.extras
 import pandas as pd
 
 # Connect to an existing database
-conn = psycopg2.connect("dbname=test_rws_db user=postgres password=altun")
+conn = psycopg2.connect("dbname=rws user=postgres password=altun")
 
 cur = conn.cursor()
 
@@ -51,6 +51,7 @@ def send_csv_to_psql(connection, csv, table_):
         cur.execute("truncate " + table + ";")  # avoid duplicates
         cur.copy_expert(sql=sql % table, file=file)
         connection.commit()
+        print("Data copied to " + table + " table")
     return connection.commit()
 
 
