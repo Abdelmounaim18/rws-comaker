@@ -19,7 +19,6 @@ class Vehicle:
         self.v_max = 16.6
         self.a_max = 1.44
         self.b_max = 4.61
-
         self.path = []
         self.current_road_index = 0
 
