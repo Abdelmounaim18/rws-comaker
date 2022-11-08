@@ -4,7 +4,7 @@ import psycopg2.extras
 import pandas as pd
 
 # Connect to an existing database
-conn = psycopg2.connect("dbname=rws user=postgres password=altun")
+conn = psycopg2.connect("dbname=test_csv user=postgres password=altun")
 
 cur = conn.cursor()
 

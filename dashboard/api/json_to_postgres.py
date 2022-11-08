@@ -10,21 +10,11 @@ cur = conn.cursor()
 
 conn.autocommit = True
 
-
-# def create_staging_table(cursor):
-#     cursor.execute("""
-#     DROP TABLE IF EXISTS ndw_data CASCADE;
-#     CREATE UNLOGGED TABLE ndw_data(
-#     ndw_data            jsonb
-#     );""")
-#
-#
-# with conn.cursor() as cursor:
-#     create_staging_table(cursor)
-
 converted_ndw_data_json = pd.read_json("../data/converted_data/refactored_ndw_data_1.json")  # read json file
 df = converted_ndw_data_json  # create dataframe
 df = df.to_json()
+
+
 # df['events'] = list(map(lambda x: json.dumps(x), df['events']))  # add a new column with the same value as the row
 # df['events'] = json.dumps(df['events'], indent=4)
 # df['events'] = json.dumps(df['events'])
@@ -33,9 +23,9 @@ df = df.to_json()
 
 def insert_data(df, table, cur):
     if len(df) > 0:
-        df_columns = list(df)
-        # create (col1,col2,...)
-        columns = ",".join(df_columns)
+        # df_columns = list(df)
+        # # create (col1,col2,...)
+        # columns = ",".join(df_columns)
 
         # create VALUES('%s', '%s",...) one '%s' per column
         values = "VALUES({})".format(",".join(["%s"]))
