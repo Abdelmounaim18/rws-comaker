@@ -10,7 +10,7 @@ cur = conn.cursor()
 
 conn.autocommit = True
 
-converted_ndw_data_json = pd.read_json("../data/converted_data/refactored_ndw_data_1.json")  # read json file
+converted_ndw_data_json = pd.read_json("../dashboard/data/converted_data/refactored_ndw_data_1.json")  # read json file
 df = converted_ndw_data_json  # create dataframe
 df = df.to_json()
 

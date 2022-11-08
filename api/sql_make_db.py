@@ -3,7 +3,7 @@ import json
 import os
 
 
-class ndwDataModel:
+class RoadsModel:
 
     def __init__(self, id, name):
         """ndwDataModel constructor
