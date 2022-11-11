@@ -7,7 +7,7 @@ class DB:
 
     @classmethod
     def get_connection(cls):
-        return sqlite3.connect("./api/db/rws.sqlite")
+        return sqlite3.connect("../db/rws.db")
 
     @classmethod
     def select(cls, query, params=()):

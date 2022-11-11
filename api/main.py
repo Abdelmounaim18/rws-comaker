@@ -1,17 +1,20 @@
 import json
 from typing import Union
 from fastapi import FastAPI
+from models.events import EventModel
 
 app = FastAPI()
 
-with open("../dashboard/data/converted_data/refactored_ndw_data.json") as json_file:
+with open("data/converted_data/refactored_ndw_data.json") as json_file:
     json_data = json.load(json_file)
 
-print(json_data["events"][0])
+# print(EventModel.find_all())
+# test = EventModel.find_all()
 
 
 @app.get("/")
 def read_root():
+    # return test
     return json_data["events"][0]
 
 

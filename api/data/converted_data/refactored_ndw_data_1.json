@@ -1,0 +1,194 @@
+{
+    "events": [
+        {
+            "ts_event": "2022-11-06T15:55:14.505Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "e9af9383-2d7f-4963-88c9-38aa1d9c33cc"
+            },
+            "lanelocation": {
+                "road": "A2",
+                "carriageway": "g",
+                "lane": "3",
+                "km": "64.242"
+            },
+            "avgspeed": {
+                "kmph": "81"
+            },
+            "flow": {
+                "count": "12"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:18.367Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "97a71051-ddb8-49f7-8f54-c348d86187c0"
+            },
+            "lanelocation": {
+                "road": "A13",
+                "carriageway": "L",
+                "lane": "3",
+                "km": "19.100"
+            },
+            "avgspeed": {
+                "kmph": "78"
+            },
+            "flow": {
+                "count": "8"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:18.274Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "e8876958-6c1a-4140-bb9e-a4f94371f096"
+            },
+            "lanelocation": {
+                "road": "A13",
+                "carriageway": "L",
+                "lane": "1",
+                "km": "14.700"
+            },
+            "avgspeed": {
+                "kmph": "115"
+            },
+            "flow": {
+                "count": "2"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:20.303Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "da04da3f-cd92-4e4e-9548-fbca647a8919"
+            },
+            "lanelocation": {
+                "road": "A28",
+                "carriageway": "L",
+                "lane": "1",
+                "km": "0.995"
+            },
+            "avgspeed": {
+                "kmph": "86"
+            },
+            "flow": {
+                "count": "9"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:06.805Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "43bdd963-4a2e-479a-b435-82fa7389d22b"
+            },
+            "lanelocation": {
+                "road": "A2",
+                "carriageway": "R",
+                "lane": "2",
+                "km": "222.590"
+            },
+            "avgspeed": {
+                "kmph": "96"
+            },
+            "flow": {
+                "count": "23"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:21.384Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "50f4c949-3e9d-488b-a7c2-a12e0d9a64da"
+            },
+            "lanelocation": {
+                "road": "A15",
+                "carriageway": "R",
+                "lane": "3",
+                "km": "60.496"
+            },
+            "avgspeed": {
+                "kmph": "98"
+            },
+            "flow": {
+                "count": "13"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:56:00.753Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "e1c93e64-c2e4-47e3-a857-308c49fe0b85"
+            },
+            "lanelocation": {
+                "road": "A28",
+                "carriageway": "L",
+                "lane": "2",
+                "km": "104.900"
+            },
+            "avgspeed": {
+                "unknown": null
+            },
+            "flow": {
+                "unknown": null
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:10.845Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "8fcf845d-c696-4525-a2ce-0b2028b68972"
+            },
+            "lanelocation": {
+                "road": "A15",
+                "carriageway": "R",
+                "lane": "3",
+                "km": "77.700"
+            },
+            "avgspeed": {
+                "kmph": "101"
+            },
+            "flow": {
+                "count": "14"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:14.061Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "24d3d42f-621b-4e52-96c0-e75e61af4c88"
+            },
+            "lanelocation": {
+                "road": "A2",
+                "carriageway": "L",
+                "lane": "2",
+                "km": "240.815"
+            },
+            "avgspeed": {
+                "kmph": "96"
+            },
+            "flow": {
+                "count": "30"
+            }
+        },
+        {
+            "ts_event": "2022-11-06T15:55:11.113Z",
+            "ts_state": "2022-11-06T15:55:00Z",
+            "measuring_point_id": {
+                "uuid": "2e3e5c61-ca2f-43d2-b532-0ec6a0ede0b7"
+            },
+            "lanelocation": {
+                "road": "A1",
+                "carriageway": "R",
+                "lane": "2",
+                "km": "96.530"
+            },
+            "avgspeed": {
+                "kmph": "124"
+            },
+            "flow": {
+                "count": "9"
+            }
+        }
+    ]
+}
