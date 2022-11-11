@@ -8,8 +8,8 @@ app = FastAPI()
 with open("data/converted_data/refactored_ndw_data.json") as json_file:
     json_data = json.load(json_file)
 
-# print(EventModel.find_all())
-# test = EventModel.find_all()
+print(EventModel.find_all())
+test = EventModel.find_all()
 
 
 @app.get("/")
@@ -20,4 +20,4 @@ def read_root():
 
 @app.get("/all-events")
 def all_events():
-    return json_data["events"]
+    return json.dumps(test, indent=4)

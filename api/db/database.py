@@ -4,10 +4,9 @@ from sqlite3 import Error
 
 
 class DB:
-
     @classmethod
     def get_connection(cls):
-        return sqlite3.connect("../db/rws.db")
+        return sqlite3.connect("../db/rws.sqlite")
 
     @classmethod
     def select(cls, query, params=()):
