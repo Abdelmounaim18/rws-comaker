@@ -20,7 +20,7 @@ def download_file_from_url():
 def decompress_gzip_file():
     with gzip.open("./raw_ndw_data.xml.gz", "rb") as f:
         gzip_file_content = f.read()
-        with open("./converted_data/converted_ndw_data.xml", "wb") as xml_file:
+        with open("converted_data/converted_ndw_data.xml", "wb") as xml_file:
             xml_file.write(gzip_file_content)
     delete_gzip_file()
 
@@ -35,17 +35,17 @@ decompress_gzip_file()
 
 
 def convert_xml_to_json():
-    with open("./converted_data/converted_ndw_data.xml") as fd:
+    with open("converted_data/converted_ndw_data.xml") as fd:
         doc = xmltodict.parse(fd.read())
         json_data = json.dumps(doc)
-        with open("./converted_data/converted_ndw_data.json", "w") as json_file:
+        with open("converted_data/converted_ndw_data.json", "w") as json_file:
             json_file.write(json_data)
 
 
 convert_xml_to_json()
 
 # open json file and convert to dict
-with open("./converted_data/converted_ndw_data.json") as json_file:
+with open("converted_data/converted_ndw_data.json") as json_file:
     json_data = json.load(json_file)
     events = json_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
         "minute_speed_and_flow_events"
@@ -83,5 +83,5 @@ for i in range(len(matched_events)):
     except:
         pass
 
-with open("./converted_data/refactored_ndw_data.json", "w") as json_file:
+with open("converted_data/refactored_ndw_data.json", "w") as json_file:
     json_file.write(json.dumps(combined_events, indent=4))
