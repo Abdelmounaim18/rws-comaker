@@ -6,7 +6,6 @@ import gzip
 from iteration_utilities import unique_everseen
 import os
 
-
 compressed_data_end_point = (
     "https://opendata.ndw.nu/Ongevalideerde_snelheden_en_Intensiteiten.xml.gz"
 )
@@ -27,12 +26,13 @@ def decompress_gzip_file():
 
 
 def delete_gzip_file():
-    import os
 
     os.remove("./raw_ndw_data.xml.gz")
 
+
 download_file_from_url()
 decompress_gzip_file()
+
 
 def convert_xml_to_json():
     with open("./converted_data/converted_ndw_data.xml") as fd:
@@ -40,6 +40,7 @@ def convert_xml_to_json():
         json_data = json.dumps(doc)
         with open("./converted_data/converted_ndw_data.json", "w") as json_file:
             json_file.write(json_data)
+
 
 convert_xml_to_json()
 
@@ -49,6 +50,7 @@ with open("./converted_data/converted_ndw_data.json") as json_file:
     events = json_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
         "minute_speed_and_flow_events"
     ]["event"]
+
 
 def get_unique_measuring_point_ids():
     measuring_point_ids = []
@@ -73,7 +75,6 @@ combined_events["events"] = []
 
 for measuring_point_id in get_unique_measuring_point_ids():
     matched_events.append(get_events_with_same_measuring_point_id(measuring_point_id))
-
 
 for i in range(len(matched_events)):
     try:
