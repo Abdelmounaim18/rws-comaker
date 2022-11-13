@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e06e682-30a5-4e98-b6e4-38dfa92478d4" name="Changes" comment="added conn to mariaDB Server">
-      <change afterPath="$PROJECT_DIR$/api/data/db_data_pusher.py" afterDir="false" />
+    <list default="true" id="6e06e682-30a5-4e98-b6e4-38dfa92478d4" name="Changes" comment="removed file">
+      <change afterPath="$PROJECT_DIR$/api/data/converted_data/refactored_ndw_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/lane_location.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/road.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/resources/lane_location.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/resources/road.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a88c7e9-40c2-4a8f-863c-5b8bfb1c85d9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a88c7e9-40c2-4a8f-863c-5b8bfb1c85d9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/data/converted_data/converted_ndw_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/data/converted_data/converted_ndw_data.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/data/converted_data/partial_converted_ndw_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/data/converted_data/partial_converted_ndw_data.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/data/converted_data/refactored_ndw_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/data/data-type-converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/data/data_endpoint_fetcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/resources/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/resources/events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/data/data_endpoint_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/data/data_endpoint_fetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/event.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/resources/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/resources/event.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/abdelmounaim/Developer/Rijkswaterstaat/rws-comaker/api/utils",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/abdelmounaim/Developer/Rijkswaterstaat/rws-comaker/api/utils&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/utils" />
@@ -95,7 +97,7 @@
       <workItem from="1668280718809" duration="423000" />
       <workItem from="1668281149878" duration="111000" />
       <workItem from="1668281267243" duration="37000" />
-      <workItem from="1668282730995" duration="14073000" />
+      <workItem from="1668282730995" duration="18708000" />
     </task>
     <task id="LOCAL-00001" summary="added conn to mariaDB Server">
       <created>1668287143249</created>
@@ -104,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668287143249</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adapted to classes and optimized code">
+      <created>1668364457118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668364457118</updated>
+    </task>
+    <task id="LOCAL-00003" summary="removed file">
+      <created>1668364491229</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668364491229</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,12 +140,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added conn to mariaDB Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="added conn to mariaDB Server" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rws_comaker$data_endpoint_fetcher.coverage" NAME="data_endpoint_fetcher Coverage Results" MODIFIED="1668361850442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/data" />
-    <SUITE FILE_PATH="coverage/rws_comaker$db_data_pusher.coverage" NAME="db_data_pusher Coverage Results" MODIFIED="1668363008676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/data" />
-    <SUITE FILE_PATH="coverage/rws_comaker$data_type_converter.coverage" NAME="data-type-converter Coverage Results" MODIFIED="1668281368046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard/data" />
-    <SUITE FILE_PATH="coverage/rws_comaker$events.coverage" NAME="events Coverage Results" MODIFIED="1668363498743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <MESSAGE value="adapted to classes and optimized code" />
+    <MESSAGE value="removed file" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed file" />
   </component>
 </project>

@@ -6,6 +6,7 @@ import gzip
 from iteration_utilities import unique_everseen
 import os
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -60,7 +61,7 @@ class DataEndpointFetcher:
             except:
                 continue
         print("finished combining")
+        with open("../data/converted_data/refactored_ndw_data.json", "w") as json_file:
+            json_file.write(json.dumps(combined_events, indent=4))
+
         return combined_events
-
-
-
