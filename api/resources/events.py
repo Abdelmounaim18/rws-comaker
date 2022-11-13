@@ -1,29 +1,27 @@
 import json
-from datetime import datetime
 
-from mariadb import Error
-
+from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.events import EventModel
 
 
-def fill_table():
-    with open('../data/converted_data/refactored_ndw_data.json') as json_file:
-        data = json.load(json_file)
-        for p in data['events']:
-            print(p)
-            road_name = p['lanelocation']['road']
+class DBAddEvents:
+    @classmethod
+    def add_all_events(cls):
+        combined_events = DataEndpointFetcher.combine_matching_events()
+        for event in combined_events['events']:
             try:
-                avg_speed = p["avgspeed"].get("kmph")
+                road_name = event['lanelocation']['road']
+
+                avg_speed = event["avgspeed"].get("kmph")
+
+                flow_count = event["flow"].get("count")
+
+                ts_event = event['ts_event']
+                uuid = event['measuring_point_id'].get("uuid")
             except:
-                avg_speed = None
-            try:
-                flow_count = p["flow"].get("count")
-            except:
-                flow_count = None
-            ts_event = p['ts_event']
-            uuid = p['measuring_point_id'].get("uuid")
+                continue
 
             EventModel.insert_data(road_name, avg_speed, flow_count, ts_event, uuid)
 
 
-fill_table()
+DBAddEvents.add_all_events()
