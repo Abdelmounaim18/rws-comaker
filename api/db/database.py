@@ -1,16 +1,17 @@
-import os
-import sqlite3
-from sqlite3 import Error
+import mariadb
+import json
+
+from utils import db_connection
 
 
 class DB:
-    @classmethod
-    def get_connection(cls):
-        return sqlite3.connect("../db/rws.sqlite")
 
     @classmethod
-    def select(cls, query, params=()):
-        # print("DB Select classmethod")
+    def get_connection(cls):
+        return mariadb.connect(**db_connection)
+
+    @classmethod
+    def select_all(cls, query, params=()):
         conn = cls.get_connection()
         cur = conn.cursor()
         cur.execute(query, params)
@@ -20,10 +21,17 @@ class DB:
 
     @classmethod
     def select_one(cls, query, params=()):
-        # print("DB Select classmethod")
         conn = cls.get_connection()
         cur = conn.cursor()
         cur.execute(query, params)
         rows = cur.fetchone()
         conn.close()
         return rows
+
+    @classmethod
+    def create(cls, query, params=()):
+        conn = cls.get_connection()
+        cur = conn.cursor()
+        cur.execute(query, params)
+        conn.commit()
+        conn.close()

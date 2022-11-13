@@ -1,0 +1,195 @@
+Index: .idea/sqldialects.xml
+===================================================================
+diff --git a/.idea/sqldialects.xml b/.idea/sqldialects.xml
+--- a/.idea/sqldialects.xml	
++++ b/.idea/sqldialects.xml	
+@@ -4,6 +4,7 @@
+     <file url="file://$PROJECT_DIR$/api/db/create_db.sql" dialect="SQLite" />
+     <file url="file://$PROJECT_DIR$/api/json_to_postgres.py" dialect="GenericSQL" />
+     <file url="file://$PROJECT_DIR$/dashboard/CSV_TO_PSQL.py" dialect="GenericSQL" />
+-    <file url="PROJECT" dialect="PostgreSQL" />
++    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/37c5d1cb-d7e3-43ec-94fe-64832ed1ae6d/console.sql" dialect="MariaDB" />
++    <file url="PROJECT" dialect="MariaDB" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: api/db/create_db.sql
+===================================================================
+diff --git a/api/db/create_db.sql b/api/db/create_db.sql
+--- a/api/db/create_db.sql	
++++ b/api/db/create_db.sql	
+@@ -30,4 +30,143 @@
+     FOREIGN KEY ("uuid") REFERENCES "LaneLocations"("uuid"),
+     FOREIGN KEY("road_name") REFERENCES "Roads"("id"),
+     PRIMARY KEY("id" AUTOINCREMENT)
+-);
+\ No newline at end of file
++);
++
++-- create table rws_db.LaneLocations
++-- (
++--     id           int auto_increment,
++--     road_name    text not null,
++--     km           int  not null,
++--     lane         int  not null,
++--     carriage_way text not null,
++--     uuid         text not null,
++--     constraint LaneLocations_pk
++--         primary key (id),
++--     constraint LaneLocations_fk
++--         foreign key (road_name) references rws_db.Roads (id)
++-- );
++
++
++
++
++-- CREATE DATABASE IF NOT EXISTS `rws_db`;CREATE TABLE IF NOT EXISTS rws_db.Roads (
++-- 	`id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++-- 	`road_name` TEXT NOT NULL,
++-- 	`last_updated` DATETIME NOT NULL,
++-- 	`event_count` INT NOT NULL,
++-- 	PRIMARY KEY(`id`),
++-- 	FOREIGN KEY(`road_name`) REFERENCES `Roads`(`id`)
++
++-- );CREATE TABLE IF NOT EXISTS rws_db.LaneLocations (
++-- 	`id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++-- 	`road_name` TEXT NOT NULL,
++-- 	`km` INT NOT NULL,
++-- 	`lane` INT NOT NULL,
++-- 	`carriage_way` TEXT NOT NULL,
++-- 	`uuid` TEXT NOT NULL,
++-- 	PRIMARY KEY(`id`),
++-- 	FOREIGN KEY(`road_name`) REFERENCES `Roads`(`id`)
++
++-- );CREATE TABLE IF NOT EXISTS rws_db.Events (
++-- 	`id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++-- 	`road_name` TEXT NOT NULL,
++-- 	`avg_speed` TEXT NOT NULL,
++-- 	`flow_count` TEXT NOT NULL,
++-- 	`ts_event` DATETIME NOT NULL,
++-- 	`uuid` TEXT NOT NULL,
++-- 	PRIMARY KEY(`id`),
++-- 	FOREIGN KEY (`uuid`) REFERENCES `LaneLocations`(`uuid`),
++-- 	FOREIGN KEY(`road_name`) REFERENCES `Roads`(`id`)
++
++-- );
++
++
++
++
++
++CREATE DATABASE IF NOT EXISTS `RWS_DB`;
++
++CREATE TABLE IF NOT EXISTS RWS_DB.Roads (
++  `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++  `road_name` TEXT NOT NULL,
++  `last_updated` DATETIME NOT NULL,
++  `event_count` INT NOT NULL,
++  PRIMARY KEY (`id`)
++);
++
++CREATE TABLE IF NOT EXISTS RWS_DB.LaneLocations (
++  `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++  `road_name` INT NOT NULL,
++  `km` INT NOT NULL,
++  `lane` INT NOT NULL,
++  `carriage_way` TEXT NOT NULL,
++  `uuid` TEXT NOT NULL,
++  PRIMARY KEY (`id`)
++  FOREIGN KEY (`road_name`) REFERENCES `Roads`(`id`),
++);
++
++CREATE TABLE IF NOT EXISTS RWS_DB.Users (
++  `id` INT  NOT NULL UNIQUE AUTO_INCREMENT,
++  `groupshare` INT  NOT NULL,
++  `email` TEXT NOT NULL,
++  `password` TEXT NOT NULL,
++  `firstname` TEXT NOT NULL,
++  `lastname` TEXT NOT NULL,
++  `locale` INT NOT NULL,
++  PRIMARY KEY (`id`),
++  FOREIGN KEY (`locale`) REFERENCES `Locales`(`id`),
++  FOREIGN KEY (`groupshare`) REFERENCES `Groupshares`(`id`)
++);
++
++CREATE TABLE IF NOT EXISTS RWS_DB.Categories (
++  `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++  `category` TEXT NOT NULL,
++  PRIMARY KEY (`id`)
++);
++
++CREATE TABLE IF NOT EXISTS RWS_DB.Items (
++  `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++  `serial_number` TEXT NOT NULL,
++  `title` TEXT NOT NULL,
++  `description` TEXT NULL,
++  `category` INT NOT NULL,
++  `value` INT NULL,
++  `amount` INT NOT NULL,
++  `picture` TEXT  NULL,
++  `purchase_date` TEXT NULL,
++  `inventory` INT NOT NULL,
++  PRIMARY KEY (`id`),
++  FOREIGN KEY (`category`) REFERENCES `Categories`(`id`),
++  FOREIGN KEY (`inventory`) REFERENCES `Inventories`(`id`)
++);
++
++CREATE TABLE IF NOT EXISTS RWS_DB.Inventories (
++  `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
++  `items` INT NOT NULL,
++  `amount` INT NOT NULL,
++  `total value` INT NOT NULL,
++  `user` INT NOT NULL,
++  PRIMARY KEY (`id`),
++  FOREIGN KEY (`user`) REFERENCES `Users`(`id`)
++);
++
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (1, 'Tablets & E-Readers');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (2, 'Laptops');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (3, 'TV''s & Home Cinema');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (4, 'Components & Peripherals');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (5, 'Audio');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (6, 'Cameras');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (7, 'Smartphones & Wearables');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (8, 'Computers');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (9, 'Power Tools');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (10, 'Services');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (11, 'Major Appliances');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (12, 'Gaming');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (13, 'Small Appliances');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (14, 'Health & Fitness');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (15, 'Smart Home');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (16, 'Networking');
++INSERT IGNORE INTO flask_api_db.Categories (id, category) VALUES (17, 'Other');
++
++COMMIT;
++
+Index: api/models/events.py
+===================================================================
+diff --git a/api/models/events.py b/api/models/events.py
+--- a/api/models/events.py	
++++ b/api/models/events.py	
+@@ -1,14 +1,20 @@
+ import sqlite3
+-
++import mariadb
+ from operator import itemgetter, attrgetter
+ 
+ # from db.database import DB
+ 
+ # from api.database import DB
+-
++db_connection = {
++        'host': '192.168.1.42',
++        'port': 3306,
++        'user': 'root',
++        'password': '53kPrsegTAznpYdi',
++        'database': 'rws_db'
++    }
+ 
+ def get_connection():
+-        return sqlite3.connect("./db/rws.sqlite")
++        return mariadb.connect(**db_connection)
+ 
+ def select_row(query, params=()):
+         # print("DB Select classmethod")

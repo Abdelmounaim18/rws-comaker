@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="192.168.1.42" uuid="37c5d1cb-d7e3-43ec-94fe-64832ed1ae6d">
+    <data-source source="LOCAL" name="mariaDB Docker" uuid="7a88c7e9-40c2-4a8f-863c-5b8bfb1c85d9">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
