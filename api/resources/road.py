@@ -10,9 +10,9 @@ from api.models.road import RoadModel
 class DBAddRoads:
     @classmethod
     def add_all_roads(cls):
-        # combined_events = DataEndpointFetcher.combine_matching_events()
-        with open('../data/converted_data/refactored_ndw_data.json') as json_file:
-            combined_events = json.load(json_file)
+        combined_events = DataEndpointFetcher.combine_matching_events()
+        # with open('../data/converted_data/refactored_ndw_data.json') as json_file:
+        #     combined_events = json.load(json_file)
         for event in combined_events['events']:
             try:
                 road_name = event['lanelocation']['road']
