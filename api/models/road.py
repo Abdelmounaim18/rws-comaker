@@ -43,7 +43,6 @@ class RoadModel:
             DB.create(
                 'INSERT INTO Roads(road_name, last_updated, event_count ) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE road_name = road_name',
                 db_values)
-            DB.create(f'UPDATE Roads SET last_updated = ? WHERE road_name = ?', (last_updated, road_name,))
         except:
             pass
 
