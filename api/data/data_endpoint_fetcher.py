@@ -1,4 +1,3 @@
-from prodict import Prodict
 import json
 import xmltodict
 import requests
