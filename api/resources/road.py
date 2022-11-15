@@ -10,7 +10,7 @@ class DBAddRoads:
     @classmethod
     def add_all_roads(cls):
         combined_events = DataEndpointFetcher.combine_matching_events()
-        print(combined_events)
+        # print(combined_events)
         # with open('../data/converted_data/refactored_ndw_data.json') as json_file:
         #     combined_events = json.load(json_file)
         for event in combined_events['events']:
@@ -22,7 +22,7 @@ class DBAddRoads:
                 continue
 
             last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
-            print(road_name, last_updated, event_count)
+            # print(road_name, last_updated, event_count)
             RoadModel.insert_data(road_name, last_updated, event_count)
 
 
