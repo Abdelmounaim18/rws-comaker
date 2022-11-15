@@ -3,11 +3,22 @@ from datetime import datetime
 
 import dateutil.parser
 
-from api.data.data_endpoint_fetcher import DataEndpointFetcher
-from api.models.road import RoadModel
+from data.data_endpoint_fetcher import DataEndpointFetcher
+from flask_restful import Resource
+from models.road import RoadModel
 
 
-class DBAddRoads:
+class Roads(Resource):
+
+    def get(self):
+        roads = RoadModel.find_all()
+        if roads:
+            print(roads)
+            return {'roads': [road.json() for road in roads]}, 200
+        return {'message': 'No roads found'}, 404
+
+
+class DBAddRoads(Resource):
     @classmethod
     def add_all_roads(cls):
         combined_events = DataEndpointFetcher.combine_matching_events()
@@ -26,6 +37,4 @@ class DBAddRoads:
             RoadModel.insert_data(road_name, last_updated, event_count)
 
 
-DBAddRoads.add_all_roads()
-
-
+# DBAddRoads.add_all_roads()
