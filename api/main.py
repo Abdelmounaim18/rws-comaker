@@ -1,7 +1,7 @@
 import json
 from typing import Union
 from fastapi import FastAPI
-from models.events import EventModel
+from api.models.event import EventModel
 
 app = FastAPI()
 

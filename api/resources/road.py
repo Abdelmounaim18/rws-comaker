@@ -25,41 +25,42 @@ class DBAddRoads:
             print(road_name, last_updated, event_count)
             RoadModel.insert_data(road_name, last_updated, event_count)
 
-    # DBAddRoads.add_all_roads()
 
-    # check if ts_event has a newer date than the previous one
-    # if so, update last_updated from ts_event
-    # if not, do nothing
-    @classmethod
-    def update_last_updated(cls):
-        ndw_data = open('../data/converted_data/refactored_ndw_data.json')
-        ndw_data = json.load(ndw_data)
+DBAddRoads.add_all_roads()
 
-        first_date = ndw_data['events'][0]['ts_event']
-
-        for event in ndw_data['events']:
-            try:
-                road_name = event['lanelocation']['road']
-                ts_event = event['ts_event']
-                if ts_event > first_date:
-                    last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
-                else:
-                    last_updated = dateutil.parser.isoparse(first_date).strftime('%Y-%m-%d %H:%M:%S')
-            except:
-                continue
-
-            print(road_name, last_updated)
-            RoadModel.insert_data(road_name, last_updated)
-
-        old_ts_event = ndw_data['events'][0]['ts_event']
-        old_ts_event = dateutil.parser.isoparse(old_ts_event).strftime('%Y-%m-%d %H:%M:%S')
-
-        new_ts_event = ndw_data['events'][1]['ts_event']
-        new_ts_event = dateutil.parser.isoparse(new_ts_event).strftime('%Y-%m-%d %H:%M:%S')
-        if new_ts_event > old_ts_event:
-            print(f'{new_ts_event} is newer')
-        print(f'old_ts_event: {old_ts_event}, new_ts_event: {new_ts_event}')
-        pass
-
-
-DBAddRoads.update_last_updated()
+# check if ts_event has a newer date than the previous one
+# if so, update last_updated from ts_event
+# if not, do nothing
+#     @classmethod
+#     def update_last_updated(cls):
+#         ndw_data = open('../data/converted_data/refactored_ndw_data.json')
+#         ndw_data = json.load(ndw_data)
+#
+#         first_date = ndw_data['events'][0]['ts_event']
+#
+#         for event in ndw_data['events']:
+#             try:
+#                 road_name = event['lanelocation']['road']
+#                 ts_event = event['ts_event']
+#                 if ts_event > first_date:
+#                     last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
+#                 else:
+#                     last_updated = dateutil.parser.isoparse(first_date).strftime('%Y-%m-%d %H:%M:%S')
+#             except:
+#                 continue
+#
+#             print(road_name, last_updated)
+#             RoadModel.insert_data(road_name, last_updated)
+#
+#         old_ts_event = ndw_data['events'][0]['ts_event']
+#         old_ts_event = dateutil.parser.isoparse(old_ts_event).strftime('%Y-%m-%d %H:%M:%S')
+#
+#         new_ts_event = ndw_data['events'][1]['ts_event']
+#         new_ts_event = dateutil.parser.isoparse(new_ts_event).strftime('%Y-%m-%d %H:%M:%S')
+#         if new_ts_event > old_ts_event:
+#             print(f'{new_ts_event} is newer')
+#         print(f'old_ts_event: {old_ts_event}, new_ts_event: {new_ts_event}')
+#         pass
+#
+#
+# DBAddRoads.update_last_updated()
