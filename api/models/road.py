@@ -2,7 +2,7 @@ from operator import attrgetter
 
 from mariadb import Error
 
-from api.db.database import DB
+from db.database import DB
 
 
 class RoadModel:
@@ -23,7 +23,6 @@ class RoadModel:
         events = list()
         for row in rows:
             events.append(RoadModel(row[0], row[1], row[2], row[3]))
-        print(rows)
         return sorted(events, key=attrgetter('road_name'))
 
     @classmethod
