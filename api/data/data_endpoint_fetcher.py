@@ -23,11 +23,12 @@ class DataEndpointFetcher:
         doc = xmltodict.parse(gzip_file_content)
         json_data = json.dumps(doc)
         converted_ndw_data = json.loads(json_data)
-        os.remove("./raw_ndw_data.xml.gz")
     print("downloaded and unzipped file")
     ndw_events = converted_ndw_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
         "minute_speed_and_flow_events"
     ]["event"]
+
+    os.remove("./raw_ndw_data.xml.gz")
 
     @classmethod
     def get_unique_measuring_point_ids(cls):

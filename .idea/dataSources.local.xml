@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="DB-222.4345.5">
-    <data-source name="mariaDB Docker" uuid="7a88c7e9-40c2-4a8f-863c-5b8bfb1c85d9">
-      <database-info product="MariaDB" version="10.6.10-MariaDB-log" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.0.7" dbms="MARIADB" exact-version="10.6.10" exact-driver-version="3.0">
+  <component name="dataSourceStorageLocal" created-in="PY-222.4345.23">
+    <data-source name="@localhost" uuid="e8044de1-df49-44a1-afdb-68601a3a1d43">
+      <database-info product="MariaDB" version="10.9.4-MariaDB-1:10.9.4+maria~ubu2204" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.0.7" dbms="MARIADB" exact-version="10.9.4" exact-driver-version="3.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -11,7 +11,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" negative="1" />
+          <node kind="schema" qname="RWS_DB" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

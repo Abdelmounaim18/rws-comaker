@@ -1,8 +1,5 @@
 from mariadb import IntegrityError, Error
-
-from api.db import database
 from operator import itemgetter, attrgetter
-
 from api.db.database import DB
 
 
