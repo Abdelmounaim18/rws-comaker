@@ -1,6 +1,5 @@
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.lane_location import LaneLocationModel
-import json
 import pprint
 
 
@@ -14,18 +13,20 @@ class DBAddLaneLocations:
         # for event in data['events']:
         #     pprint.pprint(event['measuring_point_id'].get("uuid"))
         for event in combined_events['events']:
-            try:
-                road_name = event['lanelocation']['road']
+            road_name = event['lanelocation']['road']
+            # pprint.pprint(road_name)
 
-                km = event['lanelocation']['km']
+            km = event['lanelocation']['km']
+            # pprint.pprint(km)
 
-                lane = event['lanelocation']['lane']
+            lane = event['lanelocation']['lane']
+            # pprint.pprint(lane)
 
-                carriage_way = event['lanelocation']['carriage_way']
+            carriage_way = event['lanelocation']['carriageway']
+            # pprint.pprint(carriage_way)
 
-                uuid = event['measuring_point_id'].get("uuid")
-            except:
-                continue
+            uuid = event['measuring_point_id'].get("uuid")
+            # pprint.pprint(uuid)
 
             LaneLocationModel.insert_data(road_name, km, lane, carriage_way, uuid)
 

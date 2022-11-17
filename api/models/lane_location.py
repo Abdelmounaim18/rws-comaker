@@ -1,3 +1,5 @@
+import pprint
+
 from mariadb import IntegrityError, Error
 from api.db.database import DB
 
@@ -23,7 +25,7 @@ class LaneLocationModel:
         locations = list()
         for row in rows:
             locations.append(LaneLocationModel(row[0], row[1], row[2], row[3], row[4], row[5]))
-        print(rows)
+        # print(rows)
         return locations
 
     @classmethod
@@ -39,6 +41,7 @@ class LaneLocationModel:
             :param uuid:
         """
         db_values = (road_name, km, lane, carriage_way, uuid)
+        # pprint.pprint(db_values)
         DB.create(
             'INSERT INTO LaneLocations(road_name, km, lane, carriage_way, uuid)  VALUES(?, ?, ?, ?, ?)',
             db_values)
@@ -51,4 +54,4 @@ class LaneLocationModel:
         """
         return self.__dict__
 
-# LaneLocationModel.find_all()
+

@@ -4,29 +4,33 @@ import pprint
 import dateutil.parser
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.road import RoadModel
+from timeit import default_timer as timer
 
 
 class DBAddRoads:
     @classmethod
     def add_all_roads(cls):
+        start = timer()
         combined_events = DataEndpointFetcher.combine_matching_events()
         # print(combined_events)
         # with open('../data/converted_data/refactored_ndw_data.json') as json_file:
         #     combined_events = json.load(json_file)
         for event in combined_events['events']:
-            try:
-                road_name = event['lanelocation']['road']
-                ts_event = event['ts_event']
-                event_count = 0
-            except:
-                continue
+            road_name = event['lanelocation']['road']
+            ts_event = event['ts_event']
+            event_count = 0
 
             last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
             # print(road_name, last_updated, event_count)
             RoadModel.insert_data(road_name, last_updated, event_count)
+        elapsed_time = timer() - start  # in seconds
+        print(f"elapsed_time in de functie add_all_roads: {elapsed_time}")
 
 
+begin = timer()
 DBAddRoads.add_all_roads()
+eind = timer() - begin
+print(f"tijd buiten de functie regel 30: {eind}")
 
 # check if ts_event has a newer date than the previous one
 # if so, update last_updated from ts_event

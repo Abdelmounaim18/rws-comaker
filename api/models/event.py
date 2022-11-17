@@ -1,6 +1,7 @@
 from mariadb import IntegrityError, Error
 from operator import itemgetter, attrgetter
 from api.db.database import DB
+import json
 
 
 class EventModel:
@@ -24,8 +25,26 @@ class EventModel:
         events = list()
         for row in rows:
             events.append(EventModel(row[0], row[1], row[2], row[3], row[4], row[5]))
-        print(rows)
+        # print(rows)
         return sorted(events, key=attrgetter('ts_event'))
+
+    @classmethod
+    def find_event_by_id(cls, id_event):
+        """returns one category by ID from the database
+
+        Args:
+            id_event ([int]): ID of the event
+
+        Returns:
+            dict: Event by ID
+        """
+        row = DB.select_one( 'SELECT * FROM Events WHERE id = ?', (id_event,))
+        if row:
+            event = EventModel(row[0], row[1], row[2], row[3], row[4], row[5])
+            print(f"printed regel 43 van models/event : {tuple(event.json().values())}")
+        else:
+            return None
+        return row
 
     @classmethod
     def insert_data(cls, road_name, avg_speed, flow_count, ts_event, uuid):
