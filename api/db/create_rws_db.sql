@@ -7,9 +7,7 @@ CREATE TABLE IF NOT EXISTS RWS_DB.Roads
     `event_count`  INT      NOT NULL,
     PRIMARY KEY (`id`),
     constraint Roads_pk
-        unique (road_name) using hash,
-    constraint id
-        unique (id)
+        unique (road_name) using hash
 
 );
 CREATE TABLE IF NOT EXISTS RWS_DB.LaneLocations

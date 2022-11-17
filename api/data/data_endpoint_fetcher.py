@@ -23,11 +23,12 @@ class DataEndpointFetcher:
         doc = xmltodict.parse(gzip_file_content)
         json_data = json.dumps(doc)
         converted_ndw_data = json.loads(json_data)
-        os.remove("./raw_ndw_data.xml.gz")
     print("downloaded and unzipped file")
     ndw_events = converted_ndw_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
         "minute_speed_and_flow_events"
     ]["event"]
+
+    os.remove("./raw_ndw_data.xml.gz")
 
     @classmethod
     def get_unique_measuring_point_ids(cls):
@@ -50,17 +51,17 @@ class DataEndpointFetcher:
         matched_events = []
         combined_events = {"events": []}
         print("starting comparing ids")
-        for measuring_point_id in cls.get_unique_measuring_point_ids():
-            matched_events.append(cls.get_events_with_same_measuring_point_id(measuring_point_id))
-        print("starting matching events")
-        for i in range(len(matched_events)):
-            try:
-                merged_event = matched_events[i][0] | matched_events[i][1] | matched_events[i][2]
-                combined_events["events"].append(merged_event)
-            except:
-                continue
+        # for measuring_point_id in cls.get_unique_measuring_point_ids():
+        #     matched_events.append(cls.get_events_with_same_measuring_point_id(measuring_point_id))
+        # print("starting matching events")
+        # for i in range(len(matched_events)):
+        #     try:
+        #         merged_event = matched_events[i][0] | matched_events[i][1] | matched_events[i][2]
+        #         combined_events["events"].append(merged_event)
+        #     except:
+        #         continue
         print("finished combining")
-        with open("../data/converted_data/refactored_ndw_data.json", "w") as json_file:
+        with open("./api/data/converted_data/refactored_ndw_data.json", "w") as json_file:
             json_file.write(json.dumps(combined_events, indent=4))
 
         return combined_events

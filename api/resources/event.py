@@ -1,8 +1,6 @@
-import json
-
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
-
+import json
 
 class DBAddEvents:
     @classmethod
@@ -25,3 +23,21 @@ class DBAddEvents:
 
 
 DBAddEvents.add_all_events()
+
+
+class EventById:
+
+    def get(self, id_event):
+        """return event by ID
+
+        Args:
+            id_event ([int]): ID of the category
+
+        Returns:
+            dict: contains category by ID
+        """
+        event = EventModel.find_event_by_id(id_event)
+        if event:
+            print(f"printed regel 41 van resources/event {event}")
+            return event.json(), 200
+        return {'message': 'No event found'}, 404
