@@ -60,7 +60,7 @@ class DataEndpointFetcher:
             except:
                 continue
         print("finished combining")
-        with open("../data/converted_data/refactored_ndw_data.json", "w") as json_file:
-            json_file.write(json.dumps(combined_events, indent=4))
+        # with open("../data/converted_data/refactored_ndw_data.json", "w") as json_file:
+        #     json_file.write(json.dumps(combined_events, indent=4))
 
         return combined_events

@@ -4500,7 +4500,7 @@ global_priv|||mariadb.sys|localhost|SELECT|G</Grants>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
     <column id="698" parent="334" name="id">
-      <AutoIncrement>126</AutoIncrement>
+      <AutoIncrement>127</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>

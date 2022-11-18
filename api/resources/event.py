@@ -25,3 +25,4 @@ class DBAddEvents:
 
 
 DBAddEvents.add_all_events()
+

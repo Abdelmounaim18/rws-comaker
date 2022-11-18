@@ -13,7 +13,6 @@ class Roads(Resource):
     def get(self):
         roads = RoadModel.find_all()
         if roads:
-            print(roads)
             return {'roads': [road.json() for road in roads]}, 200
         return {'message': 'No roads found'}, 404
 
@@ -33,7 +32,6 @@ class DBAddRoads(Resource):
                 continue
 
             last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
-            print(road_name, last_updated, event_count)
             RoadModel.insert_data(road_name, last_updated, event_count)
 
 
