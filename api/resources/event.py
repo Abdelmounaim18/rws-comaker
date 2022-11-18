@@ -1,6 +1,7 @@
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 import json
+from timeit import default_timer as timer
 
 class DBAddEvents:
     @classmethod
@@ -22,7 +23,11 @@ class DBAddEvents:
             EventModel.insert_data(road_name, avg_speed, flow_count, ts_event, uuid)
 
 
-# DBAddEvents.add_all_events()
+begin = timer()
+DBAddEvents.add_all_events()
+eind = timer() - begin
+print(f"tijd buiten de functie regel 30: {eind}")
+
 class EventByName:
 
     def get(self, road_name):
@@ -32,6 +37,7 @@ class EventByName:
         if events:
             return {'events': [event.json() for event in events]}, 200
         return {'message': 'Event not found'}, 404
+
 
 class EventById:
 

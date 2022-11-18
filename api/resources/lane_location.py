@@ -1,7 +1,7 @@
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.lane_location import LaneLocationModel
 import pprint
-
+from timeit import default_timer as timer
 
 class DBAddLaneLocations:
     @classmethod
@@ -31,4 +31,7 @@ class DBAddLaneLocations:
             LaneLocationModel.insert_data(road_name, km, lane, carriage_way, uuid)
 
 
-# DBAddLaneLocations.add_all_lanelocations()
+begin = timer()
+DBAddLaneLocations.add_all_lanelocations()
+eind = timer() - begin
+print(f"tijd buiten de functie regel 30: {eind}")

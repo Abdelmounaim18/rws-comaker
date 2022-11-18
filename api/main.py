@@ -32,7 +32,7 @@ def all_events():
 
 
 @app.get("/events/{id_event}")
-def event_by_id(id_event: int):
+def event_by_id(self=None, id_event: int = None):
     print(f"printed regel 36 van main : {EventModel.find_event_by_id(id_event)}")
     return EventModel.find_event_by_id(id_event)
 

@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 import pprint
 import dateutil.parser
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
+from api.db.database import DB
+from api.models.event import EventModel
 from api.models.road import RoadModel
 from timeit import default_timer as timer
 
@@ -11,14 +13,18 @@ class DBAddRoads:
     @classmethod
     def add_all_roads(cls):
         start = timer()
-        combined_events = DataEndpointFetcher.combine_matching_events()
+        # combined_events = DataEndpointFetcher.combine_matching_events()
         # print(combined_events)
-        # with open('../data/converted_data/refactored_ndw_data.json') as json_file:
-        #     combined_events = json.load(json_file)
+        with open('../data/converted_data/refactored_ndw_data.json') as json_file:
+            combined_events = json.load(json_file)
+        count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
+        count = dict(count)
+        count = count.values()
+        print(count)
         for event in combined_events['events']:
             road_name = event['lanelocation']['road']
             ts_event = event['ts_event']
-            event_count = 0
+            event_count = count
 
             last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
             # print(road_name, last_updated, event_count)
@@ -26,11 +32,22 @@ class DBAddRoads:
         elapsed_time = timer() - start  # in seconds
         print(f"elapsed_time in de functie add_all_roads: {elapsed_time}")
 
+    @classmethod
+    def road_event_count(cls):
+        # a: select road_name, count(*) from Events group by road_name
+        count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
+        count = dict(count)
+        count = count.values()
+        print(len(count))
+        # print(count.values())
+        return count
 
-# begin = timer()
+
+begin = timer()
+DBAddRoads.road_event_count()
+eind = timer() - begin
+print(f"tijd buiten de functie regel 30: {eind}")
 # DBAddRoads.add_all_roads()
-# eind = timer() - begin
-# print(f"tijd buiten de functie regel 30: {eind}")
 
 # check if ts_event has a newer date than the previous one
 # if so, update last_updated from ts_event
