@@ -6,33 +6,39 @@ from fastapi import FastAPI
 from api.models.event import EventModel
 from api.models.lane_location import LaneLocationModel
 from api.models.road import RoadModel
-from api.resources.event import EventById
+from api.resources.event import EventById, EventByName
 
 app = FastAPI()
 
 
 @app.get("/")
-async def root():
+def root():
     return {"message": "Hello World"}
 
 
 @app.get("/roads")
-async def all_roads():
+def all_roads():
     return RoadModel.find_all()
 
 
 @app.get("/events")
-async def all_events():
+def all_events():
     return EventModel.find_all()
 
 
 @app.get("/lanelocations")
-async def all_events():
+def all_events():
     return LaneLocationModel.find_all()
 
 
 @app.get("/events/{id_event}")
-async def event_by_id(id_event: int):
+def event_by_id(id_event: int):
     print(f"printed regel 36 van main : {EventModel.find_event_by_id(id_event)}")
     return EventModel.find_event_by_id(id_event)
+
+
+@app.get("/events/road/{name_road}")
+def events_by_road_name(self=None, name_road: str = None):
+    # print(f"printed regel 36 van main : {EventModel.find_event_by_id(name_road)}")
+    return EventByName.get(self, name_road)
     # return {'message': 'resource not found'}, 404

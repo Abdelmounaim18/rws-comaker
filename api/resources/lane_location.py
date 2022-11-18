@@ -31,4 +31,4 @@ class DBAddLaneLocations:
             LaneLocationModel.insert_data(road_name, km, lane, carriage_way, uuid)
 
 
-DBAddLaneLocations.add_all_lanelocations()
+# DBAddLaneLocations.add_all_lanelocations()

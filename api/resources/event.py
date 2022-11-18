@@ -22,8 +22,16 @@ class DBAddEvents:
             EventModel.insert_data(road_name, avg_speed, flow_count, ts_event, uuid)
 
 
-DBAddEvents.add_all_events()
+# DBAddEvents.add_all_events()
+class EventByName:
 
+    def get(self, road_name):
+        """returns all events by road_name
+        """
+        events = EventModel.find_events_by_road_name(road_name)
+        if events:
+            return {'events': [event.json() for event in events]}, 200
+        return {'message': 'Event not found'}, 404
 
 class EventById:
 

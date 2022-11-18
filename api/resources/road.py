@@ -27,10 +27,10 @@ class DBAddRoads:
         print(f"elapsed_time in de functie add_all_roads: {elapsed_time}")
 
 
-begin = timer()
-DBAddRoads.add_all_roads()
-eind = timer() - begin
-print(f"tijd buiten de functie regel 30: {eind}")
+# begin = timer()
+# DBAddRoads.add_all_roads()
+# eind = timer() - begin
+# print(f"tijd buiten de functie regel 30: {eind}")
 
 # check if ts_event has a newer date than the previous one
 # if so, update last_updated from ts_event
