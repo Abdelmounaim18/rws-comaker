@@ -1,0 +1,17 @@
+Index: api/models/event.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/api/models/event.py b/api/models/event.py
+--- a/api/models/event.py	
++++ b/api/models/event.py	
+@@ -38,7 +38,7 @@
+         Returns:
+             dict: Event by ID
+         """
+-        row = DB.select_one( 'SELECT * FROM Events WHERE id = ?', (id_event,))
++        row = DB.select_one('SELECT * FROM Events WHERE id = ?', (id_event,))
+         if row:
+             event = EventModel(row[0], row[1], row[2], row[3], row[4], row[5])
+             print(f"printed regel 43 van models/event : {tuple(event.json().values())}")
