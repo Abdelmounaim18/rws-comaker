@@ -2,5 +2,13 @@
     "cSpell.words": [
         "Prodict"
     ],
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:rws-comaker}/api/db/rws.sqlite",
+            "name": "rws"
+        }
+    ]
 }

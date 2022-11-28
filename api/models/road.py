@@ -1,8 +1,5 @@
 from operator import attrgetter
-
-from mariadb import Error
-
-from db.database import DB
+from api.db.database import DB
 
 
 class RoadModel:
@@ -40,7 +37,8 @@ class RoadModel:
 
         try:
             DB.create(
-                'INSERT INTO Roads(road_name, last_updated, event_count ) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE road_name = road_name',
+                'INSERT INTO Roads(road_name, last_updated, event_count ) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE '
+                'road_name = road_name',
                 db_values)
         except:
             pass
@@ -52,3 +50,7 @@ class RoadModel:
             dict: the object
         """
         return self.__dict__
+
+    @classmethod
+    def update_event_count(cls, road_name, event_count):
+        pass

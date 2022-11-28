@@ -7,7 +7,7 @@ sim = Simulation()
 n = 15
 a = 2
 b = 20
-c = 50
+c = 5
 r = 10
 l = 30
 
@@ -99,20 +99,21 @@ def road(a): return range(a, a+n)
 sim.create_gen({
     'vehicle_rate': 30,
     'vehicles': [
-        [2, {'path': [0, *road(12), *road(12+4*n), 10, 6]}],
-        [1, {'path': [0, *road(12), 9, 5]}],
-        [1, {'path': [0, *road(12), *road(12+4*n), *road(12+5*n), 11, 7]}],
+        #road from west
+        # [2, {'path': [0, *road(12), *road(12+4*n), 10, 6]}],
+        # [1, {'path': [0, *road(12), 9, 5]}],
+        # [1, {'path': [0, *road(12), *road(12+4*n), *road(12+5*n), 11, 7]}],
 
         [2, {'path': [1, *road(12+n), *road(12+5*n), 11, 7]}],
         [1, {'path': [1, *road(12+n), 10, 6]}],
-        [1, {'path': [1, *road(12+n), *road(12+5*n), *road(12+6*n), 8, 4]}],
+        # [1, {'path': [1, *road(12+n), *road(12+5*n), *road(12+6*n), 8, 4]}],
 
-        [2, {'path': [2, *road(12+2*n), *road(12+6*n), 8, 4]}],
+        # [2, {'path': [2, *road(12+2*n), *road(12+6*n), 8, 4]}],
         [1, {'path': [2, *road(12+2*n), 11, 7]}],
         [1, {'path': [2, *road(12+2*n), *road(12+6*n), *road(12+7*n), 9, 5]}],
 
         [2, {'path': [3, *road(12+3*n), *road(12+7*n), 9, 5]}],
-        [1, {'path': [3, *road(12+3*n), 8, 4]}],
+        # [1, {'path': [3, *road(12+3*n), 8, 4]}],
         [1, {'path': [3, *road(12+3*n), *road(12+7*n), *road(12+4*n), 10, 6]}],
 
     ]
