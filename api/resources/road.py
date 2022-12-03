@@ -15,16 +15,16 @@ class DBAddRoads:
         start = timer()
         # combined_events = DataEndpointFetcher.combine_matching_events()
         # print(combined_events)
-        with open('../data/converted_data/refactored_ndw_data.json') as json_file:
+        with open('../refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
-        count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
-        count = dict(count)
-        count = count.values()
-        print(count)
+        # count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
+        # count = dict(count)
+        # count = count.values()
+        # print(count)
         for event in combined_events['events']:
             road_name = event['lanelocation']['road']
             ts_event = event['ts_event']
-            event_count = count
+            event_count = 0
 
             last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
             # print(road_name, last_updated, event_count)
@@ -36,17 +36,14 @@ class DBAddRoads:
     def road_event_count(cls):
         # a: select road_name, count(*) from Events group by road_name
         count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
-        count = dict(count)
-        count = count.values()
+        # count = dict(count)
+        # count = count.values()
         print(len(count))
         # print(count.values())
         return count
 
 
-begin = timer()
-DBAddRoads.road_event_count()
-eind = timer() - begin
-print(f"tijd buiten de functie regel 30: {eind}")
+
 # DBAddRoads.add_all_roads()
 
 # check if ts_event has a newer date than the previous one

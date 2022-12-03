@@ -3,10 +3,13 @@ from api.models.event import EventModel
 import json
 from timeit import default_timer as timer
 
+
 class DBAddEvents:
     @classmethod
     def add_all_events(cls):
-        combined_events = DataEndpointFetcher.combine_matching_events()
+        # combined_events = DataEndpointFetcher.combine_matching_events()
+        with open('../refactored_ndw_data.json') as json_file:
+            combined_events = json.load(json_file)
         for event in combined_events['events']:
             try:
                 road_name = event['lanelocation']['road']
@@ -23,10 +26,8 @@ class DBAddEvents:
             EventModel.insert_data(road_name, avg_speed, flow_count, ts_event, uuid)
 
 
-begin = timer()
-DBAddEvents.add_all_events()
-eind = timer() - begin
-print(f"tijd buiten de functie regel 30: {eind}")
+# DBAddEvents.add_all_events()
+
 
 class EventByName:
 

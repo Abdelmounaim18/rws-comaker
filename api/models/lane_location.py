@@ -1,4 +1,5 @@
 import pprint
+from operator import attrgetter
 
 from mariadb import IntegrityError, Error
 from api.db.database import DB
@@ -26,7 +27,7 @@ class LaneLocationModel:
         for row in rows:
             locations.append(LaneLocationModel(row[0], row[1], row[2], row[3], row[4], row[5]))
         # print(rows)
-        return locations
+        return sorted(locations, key=attrgetter('road_name'))
 
     @classmethod
     def insert_data(cls, road_name, km, lane, carriage_way, uuid):
