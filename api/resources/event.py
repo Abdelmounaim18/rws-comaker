@@ -1,13 +1,17 @@
+from tqdm import tqdm
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 import json
 from timeit import default_timer as timer
 
+
 class DBAddEvents:
     @classmethod
     def add_all_events(cls):
         combined_events = DataEndpointFetcher.combine_matching_events()
-        for event in combined_events['events']:
+        # data = open('./api/data/converted_data/refactored_ndw_data.json')
+        # combined_events = json.load(data)
+        for event in tqdm(combined_events['events']):
             try:
                 road_name = event['lanelocation']['road']
 
@@ -26,7 +30,8 @@ class DBAddEvents:
 begin = timer()
 DBAddEvents.add_all_events()
 eind = timer() - begin
-print(f"tijd buiten de functie regel 30: {eind}")
+print(f"tijd buiten de functie regel 31: {eind}")
+
 
 class EventByName:
 
