@@ -19,7 +19,8 @@ class RoadModel:
         rows = DB.select_all('SELECT * FROM Roads')
         events = list()
         for row in rows:
-            events.append(RoadModel(row[0], row[1], row[2], row[3]))
+            count = DB.select_one('SELECT road_name, count(*) FROM Events WHERE road_name = ?', (row[1],))
+            events.append(RoadModel(row[0], row[1], row[2], count[1]))
         return sorted(events, key=attrgetter('road_name'))
 
     @classmethod
