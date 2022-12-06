@@ -31,8 +31,11 @@ class DBAddEvents:
             event_list.append((road_name, avg_speed, flow_count, ts_event, uuid))
             # print(event_list[0])
 
-            # print(event_list)
+            # print(*event_list, sep=",")
         # print(event_list)
+        # event_list = ",".join(map(str, event_list))
+        # print(event_list)
+        # print(",".join(map(str, event_list)))
         EventModel.insert_data(event_list)
 
 
