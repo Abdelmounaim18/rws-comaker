@@ -73,7 +73,7 @@ class DataEndpointFetcher:
             except:
                 continue
         print("finished combining")
-        with open("refactored_ndw_data.json", "w") as json_file:
+        with open("../refactored_ndw_data.json", "w") as json_file:
             json_file.write(json.dumps(combined_events, indent=4))
         eind = timer() - begin
         print(f"einde van combining events tijd regel 81: {eind}")

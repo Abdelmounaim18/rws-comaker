@@ -1,4 +1,7 @@
-from mariadb import IntegrityError, Error
+import logging
+from locale import Error
+
+from mariadb import IntegrityError
 from operator import itemgetter, attrgetter
 from api.db.database import DB
 import json
@@ -67,24 +70,19 @@ class EventModel:
         return sorted(events, key=attrgetter('ts_event'))
 
     @classmethod
-    def insert_data(cls, road_name, avg_speed, flow_count, ts_event, uuid):
+    def insert_data(cls, event_list):
         """Adds events to the database
 
         Args:
             events ([string]): Name of events
-            :param road_name:
-            :param avg_speed:
-            :param flow_count:
-            :param ts_event:
-            :param uuid:
+            :param event_list: list of events
         """
-        db_values = (road_name, avg_speed, flow_count, ts_event, uuid)
+
         try:
             DB.create(
-                'INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid)  VALUES(?, ?, ?, ?, ?)',
-                db_values)
+                f"INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid)  VALUES {','.join(map(str, event_list))}")
         except Error:
-            print(Error)
+            return Error
 
     def json(self):
         """Returns a JSON version of the current object
