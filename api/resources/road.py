@@ -7,7 +7,7 @@ from api.db.database import DB
 from api.models.event import EventModel
 from api.models.road import RoadModel
 from timeit import default_timer as timer
-from progressbar import progressbar
+
 
 class DBAddRoads:
     @classmethod
@@ -15,7 +15,7 @@ class DBAddRoads:
     def add_all_roads(cls):
         start = timer()
         # combined_events = DataEndpointFetcher.combine_matching_events()
-        with open('../data/converted_data/refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
         count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
         road_name = DB.select_all('SELECT road_name FROM Events GROUP BY road_name')
@@ -46,10 +46,9 @@ class DBAddRoads:
                 print(road_name, last_updated, event_count)
         # RoadModel.insert_data(road_name, last_updated, event_count)
 
-
-
         # elapsed_time = timer() - start  # in seconds
         # print(f"elapsed_time in de functie add_all_roads: {elapsed_time}")
+
     @classmethod
     def road_event_count(cls):
         # a: select road_name, count(*) from Events group by road_name

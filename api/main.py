@@ -21,7 +21,7 @@ app = FastAPI()
 
 @app.get("/update")
 def fetch_data():
-    DataEndpointFetcher.combine_matching_events()
+    # DataEndpointFetcher.combine_matching_events()
     DBAddRoads.add_all_roads()
     DBAddEvents.add_all_events()
     DBAddLaneLocations.add_all_lanelocations()
