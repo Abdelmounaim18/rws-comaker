@@ -11,40 +11,62 @@ from timeit import default_timer as timer
 
 class DBAddRoads:
     @classmethod
+    # Adding all roads to the database.
     def add_all_roads(cls):
         start = timer()
         # combined_events = DataEndpointFetcher.combine_matching_events()
-        # print(combined_events)
-        with open('../refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
-        # count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
-        # count = dict(count)
+        count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
+        road_name = DB.select_all('SELECT road_name FROM Events GROUP BY road_name')
+        print(road_name)
+        count = dict(count)
+        length_count = len(count)
         # count = count.values()
-        # print(count)
-        for event in combined_events['events']:
-            road_name = event['lanelocation']['road']
-            ts_event = event['ts_event']
-            event_count = 0
+        # print(f" regel 23 count length: {length_count}")
+        pprint.pprint(f" regel 24 count dict: {count}")
+        # print(f" regel 25 {count.values()}")
+        list_count = list(count.keys())
+        pprint.pprint(f" regel 26 {list_count}")
+        i = 0
 
-            last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
-            # print(road_name, last_updated, event_count)
-            RoadModel.insert_data(road_name, last_updated, event_count)
-        elapsed_time = timer() - start  # in seconds
-        print(f"elapsed_time in de functie add_all_roads: {elapsed_time}")
+        road_name = ""
+        event_count = 0
+        ts_event = ""
+        # print(f"regel 32 road name: {i}")
+        # print(f"regel 33 event count:  {count[i]}")
+        # event_count = count[i]
+        for event in combined_events['events']:
+            for i in list_count:
+                road_name = i
+                ts_event = event['ts_event']
+                event_count = count[i]
+
+                last_updated = dateutil.parser.isoparse(ts_event).strftime('%Y-%m-%d %H:%M:%S')
+                print(road_name, last_updated, event_count)
+        # RoadModel.insert_data(road_name, last_updated, event_count)
+
+        # elapsed_time = timer() - start  # in seconds
+        # print(f"elapsed_time in de functie add_all_roads: {elapsed_time}")
 
     @classmethod
     def road_event_count(cls):
         # a: select road_name, count(*) from Events group by road_name
-        count = DB.select_all('SELECT road_name, count(*) FROM Events GROUP BY road_name')
-        # count = dict(count)
-        # count = count.values()
+        count = DB.select_all(
+            'SELECT COUNT(road_name), road_name FROM RWS_DB.Events GROUP BY road_name ORDER BY road_name')
+        count = dict(count)
+        count = count
         print(len(count))
+        print(count)
         # print(count.values())
         return count
 
 
-
-# DBAddRoads.add_all_roads()
+begin = timer()
+DBAddRoads.add_all_roads()
+eind = timer() - begin
+print(f"tijd buiten de functie regel 48: {eind}")
+# DBAddRoads.road_event_count()
 
 # check if ts_event has a newer date than the previous one
 # if so, update last_updated from ts_event

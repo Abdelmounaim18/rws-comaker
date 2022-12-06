@@ -8,7 +8,7 @@ class DBAddEvents:
     @classmethod
     def add_all_events(cls):
         # combined_events = DataEndpointFetcher.combine_matching_events()
-        with open('../refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
         for event in combined_events['events']:
             try:
@@ -26,7 +26,7 @@ class DBAddEvents:
             EventModel.insert_data(road_name, avg_speed, flow_count, ts_event, uuid)
 
 
-# DBAddEvents.add_all_events()
+DBAddEvents.add_all_events()
 
 
 class EventByName:
