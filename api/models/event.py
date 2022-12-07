@@ -80,7 +80,8 @@ class EventModel:
 
         try:
             DB.create(
-                f"INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid)  VALUES {','.join(map(str, event_list))}")
+                f"INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid)  VALUES (?, ?, ?, ?, ?)",
+                event_list)
         except Error:
             return Error
 
