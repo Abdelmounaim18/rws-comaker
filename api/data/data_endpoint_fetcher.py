@@ -80,5 +80,4 @@ class DataEndpointFetcher:
 
         return combined_events
 
-
 # DataEndpointFetcher.combine_matching_events()

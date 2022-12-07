@@ -5,12 +5,11 @@ from api.models.lane_location import LaneLocationModel
 import pprint
 from timeit import default_timer as timer
 
-
 class DBAddLaneLocations:
     @classmethod
     def add_all_lanelocations(cls):
         # combined_events = DataEndpointFetcher.combine_matching_events()
-        with open('./refactored_ndw_data.json') as json_file:
+        with open('../refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
         # data = json.load(data)
         # # pprint.pprint(data)
@@ -33,3 +32,4 @@ class DBAddLaneLocations:
             # pprint.pprint(uuid)
 
             LaneLocationModel.insert_data(road_name, km, lane, carriage_way, uuid)
+
