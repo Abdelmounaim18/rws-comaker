@@ -48,6 +48,3 @@ class RoadModel:
         """
         return self.__dict__
 
-    @classmethod
-    def update_event_count(cls, road_name, event_count):
-        pass
