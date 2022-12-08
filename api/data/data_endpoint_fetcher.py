@@ -12,28 +12,30 @@ logger = logging.getLogger(__name__)
 
 
 class DataEndpointFetcher:
-    begin = timer()
-    compressed_data_end_point = (
-        "https://opendata.ndw.nu/Ongevalideerde_snelheden_en_Intensiteiten.xml.gz"
-    )
+    @classmethod
+    def fetch_data(cls):
+        begin = timer()
+        compressed_data_end_point = (
+            "https://opendata.ndw.nu/Ongevalideerde_snelheden_en_Intensiteiten.xml.gz"
+        )
 
-    url = compressed_data_end_point
-    get_request = requests.get(url, allow_redirects=True)
-    open("./raw_ndw_data.xml.gz", "wb").write(get_request.content)
+        url = compressed_data_end_point
+        get_request = requests.get(url, allow_redirects=True)
+        open("./raw_ndw_data.xml.gz", "wb").write(get_request.content)
 
-    with gzip.open("./raw_ndw_data.xml.gz", "rb") as f:
-        gzip_file_content = f.read()
-        doc = xmltodict.parse(gzip_file_content)
-        json_data = json.dumps(doc)
-        converted_ndw_data = json.loads(json_data)
-    print("downloaded and unzipped file")
-    ndw_events = converted_ndw_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
-        "minute_speed_and_flow_events"
-    ]["event"]
+        with gzip.open("./raw_ndw_data.xml.gz", "rb") as f:
+            gzip_file_content = f.read()
+            doc = xmltodict.parse(gzip_file_content)
+            json_data = json.dumps(doc)
+            converted_ndw_data = json.loads(json_data)
+        print("downloaded and unzipped file")
+        ndw_events = converted_ndw_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
+            "minute_speed_and_flow_events"
+        ]["event"]
 
-    os.remove("./raw_ndw_data.xml.gz")
-    eind = timer() - begin
-    print(f"Download & unzip tijd regel 35: {eind}")
+        os.remove("./raw_ndw_data.xml.gz")
+        eind = timer() - begin
+        print(f"Download & unzip tijd regel 35: {eind}")
 
     @classmethod
     def get_unique_measuring_point_ids(cls):
@@ -63,7 +65,7 @@ class DataEndpointFetcher:
         for measuring_point_id in tqdm(cls.get_unique_measuring_point_ids()):
             matched_events.append(cls.get_events_with_same_measuring_point_id(measuring_point_id))
         end = timer() - start
-        print(f"einde van comparing ids tijd regel 68: {end}")
+        print(f"\neinde van comparing ids tijd regel 68: {end}")
         print("starting matching events")
         begin = timer()
         for i in tqdm(range(len(matched_events))):
@@ -80,5 +82,5 @@ class DataEndpointFetcher:
 
         return combined_events
 
-
+# DataEndpointFetcher.fetch_data()
 # DataEndpointFetcher.combine_matching_events()

@@ -30,22 +30,17 @@ class LaneLocationModel:
         return sorted(locations, key=attrgetter('road_name'))
 
     @classmethod
-    def insert_data(cls, road_name, km, lane, carriage_way, uuid):
-        """Adds events to the database
+    def insert_data(cls, lane_location_list):
+        """Adds lanelocations to the database
 
         Args:
-            events ([string]): Name of events
-            :param road_name:
-            :param km:
-            :param lane:
-            :param carriage_way:
-            :param uuid:
+            lanelocations ([string]): Name of lanelocations
+            :param lane_location_list: list of lanelocations
         """
-        db_values = (road_name, km, lane, carriage_way, uuid)
-        # pprint.pprint(db_values)
+        # the .format() method is used to format the string into a proper SQL statement using the given values as list.
         DB.create(
-            'INSERT INTO LaneLocations(road_name, km, lane, carriage_way, uuid)  VALUES(?, ?, ?, ?, ?)',
-            db_values)
+            'INSERT INTO LaneLocations(road_name, km, lane, carriage_way, uuid)  VALUES{}'.format(
+                ', '.join(map(str, lane_location_list))))
 
     def json(self):
         """Returns a JSON version of the current object
@@ -54,5 +49,3 @@ class LaneLocationModel:
             dict: the object
         """
         return self.__dict__
-
-

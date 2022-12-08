@@ -79,8 +79,10 @@ class EventModel:
         """
 
         try:
+            # the .format() method is used to format the string into a proper SQL statement using the given values as list.
             DB.create(
-                f"INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid)  VALUES {','.join(map(str, event_list))}")
+                'INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid) VALUES{}'.format(
+                    ', '.join(map(str, event_list))))
         except Error:
             return Error
 

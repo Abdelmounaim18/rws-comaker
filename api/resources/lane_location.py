@@ -9,27 +9,30 @@ from timeit import default_timer as timer
 class DBAddLaneLocations:
     @classmethod
     def add_all_lanelocations(cls):
-        # combined_events = DataEndpointFetcher.combine_matching_events()
-        with open('./refactored_ndw_data.json') as json_file:
+        """
+        Add all lanelocations to the database
+        @return: Nothing
+        """
+
+        lane_location_list = []
+
+        with open('../refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
-        # data = json.load(data)
-        # # pprint.pprint(data)
-        # for event in data['events']:
-        #     pprint.pprint(event['measuring_point_id'].get("uuid"))
+
+        # appending all lanelocations to a list
         for event in combined_events['events']:
-            road_name = event['lanelocation']['road']
-            # pprint.pprint(road_name)
+            try:
+                road_name = event['lanelocation']['road']
+                km = event['lanelocation']['km']
+                lane = event['lanelocation']['lane']
+                carriage_way = event['lanelocation']['carriageway']
+                uuid = event['measuring_point_id'].get("uuid")
+            except:
+                continue
 
-            km = event['lanelocation']['km']
-            # pprint.pprint(km)
+            lane_location_list.append((road_name, km, lane, carriage_way, uuid))
 
-            lane = event['lanelocation']['lane']
-            # pprint.pprint(lane)
+        LaneLocationModel.insert_data(lane_location_list)
 
-            carriage_way = event['lanelocation']['carriageway']
-            # pprint.pprint(carriage_way)
 
-            uuid = event['measuring_point_id'].get("uuid")
-            # pprint.pprint(uuid)
-
-            LaneLocationModel.insert_data(road_name, km, lane, carriage_way, uuid)
+DBAddLaneLocations.add_all_lanelocations()

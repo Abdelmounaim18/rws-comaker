@@ -1,5 +1,5 @@
 from tqdm import tqdm
-
+import pprint
 from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 import json
@@ -9,33 +9,35 @@ from timeit import default_timer as timer
 class DBAddEvents:
     @classmethod
     def add_all_events(cls):
-        # combined_events = DataEndpointFetcher.combine_matching_events()
+        """
+        Add all events to the database
+        @return: Nothing
+        """
+        event_list = []
+
         with open('../refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
-        event_list = list()
+
+        # appending all events to a list
         for event in tqdm(combined_events['events']):
             try:
                 road_name = event['lanelocation']['road']
-
                 avg_speed = event["avgspeed"].get("kmph")
-
+                if avg_speed is None or avg_speed == 0:
+                    avg_speed = 0
+                else:
+                    avg_speed = avg_speed
                 flow_count = event["flow"].get("count")
-
+                if flow_count is None or flow_count == 0:
+                    flow_count = 0
+                else:
+                    flow_count = flow_count
                 ts_event = event['ts_event']
-
                 uuid = event['measuring_point_id'].get("uuid")
             except:
                 continue
 
-            #
             event_list.append((road_name, avg_speed, flow_count, ts_event, uuid))
-            # print(event_list[0])
-
-            # print(*event_list, sep=",")
-        # print(event_list)
-        # event_list = ",".join(map(str, event_list))
-        # print(event_list)
-        # print(",".join(map(str, event_list)))
         EventModel.insert_data(event_list)
 
 

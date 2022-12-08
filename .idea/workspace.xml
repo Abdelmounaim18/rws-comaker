@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e06e682-30a5-4e98-b6e4-38dfa92478d4" name="Changes" comment="added: bezig met bulk insert van event.py (alle items in een keer inserten)">
+    <list default="true" id="6e06e682-30a5-4e98-b6e4-38dfa92478d4" name="Changes" comment="added: correct event_count to Roads Table. (and added progressbar for data fetching😁)">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rws-comaker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rws-comaker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_11_2022__09_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_11_2022__09_24__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/data/data_endpoint_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/data/data_endpoint_fetcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/models/event.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/event.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/lane_location.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/lane_location.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/road.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/road.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/refactored_ndw_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/refactored_ndw_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/resources/event.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/resources/event.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/resources/lane_location.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/resources/lane_location.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/resources/road.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/resources/road.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,29 +70,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/abdullah/Documents/Forward Football opdracht&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
+    "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
+    "last_opened_file_path": "C:/Users/abdullah/PycharmProjects/AquabotsDashboard-Flask",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;MariaDB&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MariaDB"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/utils" />
@@ -195,6 +215,8 @@
       <workItem from="1670320654900" duration="3681000" />
       <workItem from="1670325600007" duration="50000" />
       <workItem from="1670325658755" duration="4944000" />
+      <workItem from="1670366795946" duration="713000" />
+      <workItem from="1670505086384" duration="20492000" />
     </task>
     <task id="LOCAL-00001" summary="added conn to mariaDB Server">
       <created>1668287143249</created>
@@ -290,22 +312,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="added: bezig met bulk insert van event.py (alle items in een keer inserten)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rws_comaker$json_to_postgres.coverage" NAME="json_to_postgres Coverage Results" MODIFIED="1667901965498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard/api" />
-    <SUITE FILE_PATH="coverage/rws_comaker$data_endpoint_fetcher.coverage" NAME="data_endpoint_fetcher Coverage Results" MODIFIED="1670322917304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/data" />
-    <SUITE FILE_PATH="coverage/rws_comaker$data_type_converter.coverage" NAME="data-type-converter Coverage Results" MODIFIED="1667307723398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard/data" />
-    <SUITE FILE_PATH="coverage/rws_comaker$CSV_TO_PSQL.coverage" NAME="CSV_TO_PSQL Coverage Results" MODIFIED="1667906262232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard" />
-    <SUITE FILE_PATH="coverage/rws_comaker$main.coverage" NAME="main Coverage Results" MODIFIED="1668193126286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/rws_comaker$app.coverage" NAME="app Coverage Results" MODIFIED="1668508918845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/rws_comaker$lane_location__1_.coverage" NAME="lane_location (1) Coverage Results" MODIFIED="1668615365644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/models" />
-    <SUITE FILE_PATH="coverage/rws_comaker$road.coverage" NAME="road Coverage Results" MODIFIED="1670327385236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/models" />
-    <SUITE FILE_PATH="coverage/rws_comaker$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1668181677510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
-    <SUITE FILE_PATH="coverage/rws_comaker$db_data_pusher.coverage" NAME="db_data_pusher Coverage Results" MODIFIED="1668363008676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/data" />
-    <SUITE FILE_PATH="coverage/rws_comaker$events.coverage" NAME="events Coverage Results" MODIFIED="1668195754760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
-    <SUITE FILE_PATH="coverage/rws_comaker$roads.coverage" NAME="roads Coverage Results" MODIFIED="1668188655853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
-    <SUITE FILE_PATH="coverage/rws_comaker$lane_location.coverage" NAME="lane_location Coverage Results" MODIFIED="1668723688048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$main.coverage" NAME="main Coverage Results" MODIFIED="1668694028003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/rws_comaker$CSV_TO_PSQL.coverage" NAME="CSV_TO_PSQL Coverage Results" MODIFIED="1667745657206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard" />
     <SUITE FILE_PATH="coverage/rws_comaker$lane_locations.coverage" NAME="lane_locations Coverage Results" MODIFIED="1668191163063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
-    <SUITE FILE_PATH="coverage/rws_comaker$events__1_.coverage" NAME="events (1) Coverage Results" MODIFIED="1668193961047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/models" />
+    <SUITE FILE_PATH="coverage/rws_comaker$events.coverage" NAME="events Coverage Results" MODIFIED="1668363498743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$lane_location.coverage" NAME="lane_location Coverage Results" MODIFIED="1670527715799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$lane_location__1_.coverage" NAME="lane_location (1) Coverage Results" MODIFIED="1668615365644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/models" />
+    <SUITE FILE_PATH="coverage/rws_comaker$roads.coverage" NAME="roads Coverage Results" MODIFIED="1668188655853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$db_data_pusher.coverage" NAME="db_data_pusher Coverage Results" MODIFIED="1668363008676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/data" />
+    <SUITE FILE_PATH="coverage/rws_comaker$data_type_converter.coverage" NAME="data-type-converter Coverage Results" MODIFIED="1667767872766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard/data" />
+    <SUITE FILE_PATH="coverage/rws_comaker$road.coverage" NAME="road Coverage Results" MODIFIED="1670529094256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$app.coverage" NAME="app Coverage Results" MODIFIED="1668508918845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/rws_comaker$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1668181677510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
     <SUITE FILE_PATH="coverage/rws_comaker$Doctests_in_extras.coverage" NAME="Doctests in extras Coverage Results" MODIFIED="1667843315612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages/psycopg2" />
-    <SUITE FILE_PATH="coverage/rws_comaker$event.coverage" NAME="event Coverage Results" MODIFIED="1670331527438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$event.coverage" NAME="event Coverage Results" MODIFIED="1670527644237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/resources" />
+    <SUITE FILE_PATH="coverage/rws_comaker$events__1_.coverage" NAME="events (1) Coverage Results" MODIFIED="1668193961047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/models" />
+    <SUITE FILE_PATH="coverage/rws_comaker$json_to_postgres.coverage" NAME="json_to_postgres Coverage Results" MODIFIED="1667846884651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dashboard/api" />
+    <SUITE FILE_PATH="coverage/rws_comaker$data_endpoint_fetcher.coverage" NAME="data_endpoint_fetcher Coverage Results" MODIFIED="1670527054734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/data" />
   </component>
 </project>
