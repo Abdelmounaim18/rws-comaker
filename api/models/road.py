@@ -24,23 +24,19 @@ class RoadModel:
         return sorted(events, key=attrgetter('road_name'))
 
     @classmethod
-    def insert_data(cls, road_name, last_updated, event_count):
-        """Adds events to the database
+    def insert_data(cls, road_list):
+        """Adds road_list to the database
 
         Args:
-            events ([string]): Name of events
-            :param event_count:
-            :param last_updated:
-            :param road_name:
+            road_list ([string]): Name of road_list
+            :param road_list
         """
 
-        db_values = (road_name, last_updated, event_count)
-
         try:
+            # the .format() method is used to format the string into a proper SQL statement using the given values as list.
             DB.create(
-                'INSERT INTO Roads(road_name, last_updated, event_count ) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE '
-                'road_name = road_name',
-                db_values)
+                'INSERT INTO Roads(road_name, last_updated, event_count ) VALUES{}'.format(
+                    ', '.join(map(str, road_list))))
         except:
             pass
 
@@ -52,6 +48,3 @@ class RoadModel:
         """
         return self.__dict__
 
-    @classmethod
-    def update_event_count(cls, road_name, event_count):
-        pass
