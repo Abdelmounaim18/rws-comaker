@@ -61,11 +61,6 @@ class DBAddRoads:
         # print(count.values())
         return count
 
-
-begin = timer()
-DBAddRoads.add_all_roads()
-eind = timer() - begin
-print(f"tijd buiten de functie regel 48: {eind}")
 # DBAddRoads.road_event_count()
 
 # check if ts_event has a newer date than the previous one

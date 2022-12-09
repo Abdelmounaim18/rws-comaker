@@ -26,7 +26,7 @@ class DBAddEvents:
             EventModel.insert_data(road_name, avg_speed, flow_count, ts_event, uuid)
 
 
-DBAddEvents.add_all_events()
+# DBAddEvents.add_all_events()
 
 
 class EventByName:
