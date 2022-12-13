@@ -1,6 +1,6 @@
 from tqdm import tqdm
 import pprint
-from api.data.data_endpoint_fetcher import DataEndpointFetcher
+# from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 import json
 from timeit import default_timer as timer

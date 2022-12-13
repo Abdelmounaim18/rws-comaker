@@ -89,7 +89,7 @@ class LaneLocationModel:
         """
         # the .format() method is used to format the string into a proper SQL statement using the given values as list.
         DB.create(
-            'INSERT INTO LaneLocations(road_name, km, lane, carriage_way, uuid)  VALUES{}'.format(
+            'INSERT IGNORE INTO LaneLocations(road_name, km, lane, carriage_way, uuid)  VALUES{}'.format(
                 ', '.join(map(str, lane_location_list))))
 
     def json(self):
