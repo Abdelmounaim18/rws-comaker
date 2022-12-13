@@ -16,7 +16,7 @@ class DBAddLaneLocations:
 
         lane_location_list = []
 
-        with open('../refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
 
         # appending all lanelocations to a list
