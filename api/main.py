@@ -1,27 +1,26 @@
-import json
-from typing import Union
-
 from fastapi import FastAPI
 
-from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 from api.models.lane_location import LaneLocationModel
 from api.models.road import RoadModel
-from api.resources.event import EventById, EventByName, DBAddEvents
-from api.resources.lane_location import DBAddLaneLocations
-from api.resources.road import DBAddRoads
+from api.resources.event import EventByName
 
 app = FastAPI()
 
-#
-# @app.get("/")
-# def root():
-#     return {"message": "not found"}
+
+@app.get("/")
+def root():
+    return {"message": "not found"}
 
 
 @app.get("/update")
 def fetch_data():
-    DataEndpointFetcher.combine_matching_events()
+    from api.data.data_endpoint_fetcher import DataEndpointFetcher
+    from api.resources.road import DBAddRoads
+    from api.resources.event import DBAddEvents
+    from api.resources.lane_location import DBAddLaneLocations
+
+    # DataEndpointFetcher.combine_matching_events()
     DBAddRoads.add_all_roads()
     DBAddEvents.add_all_events()
     DBAddLaneLocations.add_all_lanelocations()
@@ -41,6 +40,21 @@ def all_events():
 @app.get("/lanelocations")
 def all_events():
     return LaneLocationModel.find_all()
+
+
+@app.get("/lanelocations/{road_name}")
+def carriageway_by_road_name(road_name: str):
+    return LaneLocationModel.find_carriageway_by_road_name(road_name)
+
+
+@app.get("/lanelocations/{road_name}/lane/{lane}")
+def lanelocation_by_lane(road_name: str, lane: int):
+    return LaneLocationModel.find_lanelocation_by_lane(road_name, lane)
+
+
+@app.get("/lanelocations/{road_name}/carriageway/{carriageway}")
+def lanelocation_by_carriageway(road_name: str, carriageway: str):
+    return LaneLocationModel.find_lanelocation_by_carriageway(road_name, carriageway)
 
 
 @app.get("/events/{id_event}")

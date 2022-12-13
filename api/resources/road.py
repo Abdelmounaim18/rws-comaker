@@ -20,22 +20,24 @@ class DBAddRoads:
         """
         road_list = []
 
-        with open('../refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
-
+        # querying event count for each road
         count = DB.select_all(
-            'SELECT road_name, count(*) FROM Events GROUP BY road_name')  # querying event count for each road
-        count = dict(count)  # converting list of tuples to dictionary
+            'SELECT road_name, count(*) FROM Events GROUP BY road_name')
+        count = dict(count)  # converting to dict for easier access
 
+        # querying the latest event for each road
         latest_event = DB.select_all(
-            'SELECT road_name, max(ts_event) FROM Events GROUP BY road_name')  # querying the latest event for each road
-        latest_event = dict(
-            latest_event)  # making a dictionary to easily access and extract the latest event for each road
-        latest_date = list(latest_event.values())  # extracting the latest event for each road
-
-        road_names_count_list = list(count.keys())  # extracting the road names from the dictionary
-
-        for i in road_names_count_list:  # appending all roads to a list
+            'SELECT road_name, max(ts_event) FROM Events GROUP BY road_name')
+        # making a dictionary to easily access and extract the latest event for each road
+        latest_event = dict(latest_event)
+        # extracting the latest event for each road
+        latest_date = list(latest_event.values())
+        # extracting the road names from the dictionary
+        road_names_count_list = list(count.keys())
+        # appending all roads to a list
+        for i in road_names_count_list:
             road_name = i
             event_count = count[i]
             last_updated = latest_date[road_names_count_list.index(i)]
