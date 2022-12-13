@@ -35,4 +35,4 @@ class DBAddLaneLocations:
         LaneLocationModel.insert_data(lane_location_list)
 
 
-DBAddLaneLocations.add_all_lanelocations()
+# DBAddLaneLocations.add_all_lanelocations()

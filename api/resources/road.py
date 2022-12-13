@@ -46,5 +46,5 @@ class DBAddRoads:
         RoadModel.insert_data(road_list)
 
 
-DBAddRoads.add_all_roads()
+# DBAddRoads.add_all_roads()
 # DBAddRoads.road_event_count()
