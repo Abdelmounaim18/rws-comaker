@@ -41,7 +41,7 @@ class DBAddEvents:
         EventModel.insert_data(event_list)
 
 
-DBAddEvents.add_all_events()
+# DBAddEvents.add_all_events()
 
 
 class EventByName:

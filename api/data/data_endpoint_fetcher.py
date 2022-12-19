@@ -16,11 +16,9 @@ class DataEndpointFetcher:
     compressed_data_end_point = (
         "https://opendata.ndw.nu/Ongevalideerde_snelheden_en_Intensiteiten.xml.gz"
     )
-
     url = compressed_data_end_point
     get_request = requests.get(url, allow_redirects=True)
     open("./raw_ndw_data.xml.gz", "wb").write(get_request.content)
-
     with gzip.open("./raw_ndw_data.xml.gz", "rb") as f:
         gzip_file_content = f.read()
         doc = xmltodict.parse(gzip_file_content)
@@ -30,7 +28,6 @@ class DataEndpointFetcher:
     ndw_events = converted_ndw_data["SOAP:Envelope"]["SOAP:Body"]["ndw:NdwMrm"][
         "minute_speed_and_flow_events"
     ]["event"]
-
     os.remove("./raw_ndw_data.xml.gz")
     eind = timer() - begin
     print(f"Download & unzip tijd regel 35: {eind}")
@@ -80,5 +77,5 @@ class DataEndpointFetcher:
 
         return combined_events
 
-
-DataEndpointFetcher.combine_matching_events()
+# DataEndpointFetcher.fetch_data()
+# DataEndpointFetcher.combine_matching_events()
