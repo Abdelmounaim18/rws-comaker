@@ -1,4 +1,5 @@
 import json
+
 import xmltodict
 import requests
 import gzip
@@ -53,16 +54,17 @@ class DataEndpointFetcher:
 
     @classmethod
     def combine_matching_events(cls):
+        # matched_events = []
         start = timer()
-        matched_events = []
+        matched_events = [cls.get_events_with_same_measuring_point_id(measuring_point_id) for measuring_point_id in
+                          tqdm(cls.get_unique_measuring_point_ids())]
+        end = timer() - start
+        print(f"combine matching events tijd regel 62: {end}")
         combined_events = {"events": []}
         print("starting comparing ids")
-        for measuring_point_id in tqdm(cls.get_unique_measuring_point_ids()):
-            matched_events.append(cls.get_events_with_same_measuring_point_id(measuring_point_id))
-        end = timer() - start
-        print(f"\neinde van comparing ids tijd regel 68: {end}")
+        # for measuring_point_id in tqdm(cls.get_unique_measuring_point_ids()):
+        #     matched_events.append(cls.get_events_with_same_measuring_point_id(measuring_point_id))
         print("starting matching events")
-        begin = timer()
         for i in tqdm(range(len(matched_events))):
             try:
                 merged_event = matched_events[i][0] | matched_events[i][1] | matched_events[i][2]
@@ -72,10 +74,8 @@ class DataEndpointFetcher:
         print("finished combining")
         with open("../refactored_ndw_data.json", "w") as json_file:
             json_file.write(json.dumps(combined_events, indent=4))
-        eind = timer() - begin
-        print(f"einde van combining events tijd regel 81: {eind}")
 
         return combined_events
 
-# DataEndpointFetcher.fetch_data()
-# DataEndpointFetcher.combine_matching_events()
+
+DataEndpointFetcher.combine_matching_events()

@@ -1,10 +1,10 @@
-import logging
 from locale import Error
 
-from mariadb import IntegrityError
 from operator import itemgetter, attrgetter
+
+import pandas as pd
+
 from api.db.database import DB
-import json
 
 
 class EventModel:
@@ -80,19 +80,29 @@ class EventModel:
 
         try:
             # the .format() method is used to format the string into a proper SQL statement using the given values as list.
-            DB.create(
-                'INSERT IGNORE INTO Events(road_name, avg_speed, flow_count, ts_event, uuid) VALUES{}'.format(
-                    ', '.join(map(str, event_list))))
+            tuples = DB.select_all('SELECT road_name, avg_speed, flow_count, ts_event, uuid FROM Events')
+            df = pd.DataFrame(tuples, columns=['road_name', 'avg_speed', 'flow_count', 'ts_event', 'uuid'])
+            # tuples = list(tuples)
+            print(f"dit zijn de tuples: {df}")
+            for event in event_list:
+                if event not in df:
+                    DB.create(
+                        'INSERT INTO Events(road_name, avg_speed, flow_count, ts_event, uuid) VALUES{}'.format(
+                            ', '.join(map(str, event_list))))
+            # DB.create(
+            #     'INSERT IGNORE INTO Events(road_name, avg_speed, flow_count, ts_event, uuid) VALUES{}'.format(
+            #         ', '.join(map(str, event_list))))
         except Error:
             return Error
 
-    def json(self):
-        """Returns a JSON version of the current object
 
-        Returns:
-            dict: the object
-        """
-        return self.__dict__
+def json(self):
+    """Returns a JSON version of the current object
+
+    Returns:
+        dict: the object
+    """
+    return self.__dict__
 
 
 EventModel.find_all()

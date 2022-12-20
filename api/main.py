@@ -1,19 +1,26 @@
 from fastapi import FastAPI
 
-from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 from api.models.lane_location import LaneLocationModel
 from api.models.road import RoadModel
-from api.resources.event import DBAddEvents, EventByName
-from api.resources.lane_location import DBAddLaneLocations
-from api.resources.road import DBAddRoads
+from api.resources.event import EventByName
 
 app = FastAPI()
 
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+
 @app.get("/update")
 def fetch_data():
-    DataEndpointFetcher.combine_matching_events()
+    # from api.data.data_endpoint_fetcher import DataEndpointFetcher
+    from api.resources.road import DBAddRoads
+    from api.resources.event import DBAddEvents
+    from api.resources.lane_location import DBAddLaneLocations
+
+    # DataEndpointFetcher.combine_matching_events()
     DBAddRoads.add_all_roads()
     DBAddEvents.add_all_events()
     DBAddLaneLocations.add_all_lanelocations()

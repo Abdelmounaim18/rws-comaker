@@ -1,9 +1,6 @@
 from tqdm import tqdm
-import pprint
-# from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.event import EventModel
 import json
-from timeit import default_timer as timer
 
 
 class DBAddEvents:
@@ -15,7 +12,7 @@ class DBAddEvents:
         """
         event_list = []
 
-        with open('./refactored_ndw_data.json') as json_file:
+        with open('../refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
 
         # appending all events to a list
@@ -41,7 +38,7 @@ class DBAddEvents:
         EventModel.insert_data(event_list)
 
 
-# DBAddEvents.add_all_events()
+DBAddEvents.add_all_events()
 
 
 class EventByName:

@@ -3,7 +3,6 @@ import pprint
 import dateutil.parser
 from tqdm import tqdm
 
-from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.db.database import DB
 from api.models.event import EventModel
 from api.models.road import RoadModel

@@ -1,9 +1,5 @@
 import json
-
-# from api.data.data_endpoint_fetcher import DataEndpointFetcher
 from api.models.lane_location import LaneLocationModel
-import pprint
-from timeit import default_timer as timer
 
 
 class DBAddLaneLocations:
