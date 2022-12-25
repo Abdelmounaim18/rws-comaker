@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PY-223.7571.203">
     <data-source name="MariaDB" uuid="2b7b0cca-7f4c-45d1-8de4-7803e1c32c47">
-      <database-info product="MariaDB" version="10.9.4-MariaDB-1:10.9.4+maria~ubu2204" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.0.7" dbms="MARIADB" exact-version="10.9.4" exact-driver-version="3.0">
+      <database-info product="MariaDB" version="10.10.2-MariaDB-1:10.10.2+maria~ubu2204" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.0.7" dbms="MARIADB" exact-version="10.10.2" exact-driver-version="3.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

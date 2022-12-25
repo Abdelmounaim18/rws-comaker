@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-
+import logging
+import subprocess
 from api.models.event import EventModel
 from api.models.lane_location import LaneLocationModel
 from api.models.road import RoadModel
@@ -66,3 +67,17 @@ def event_by_id(self=None, id_event: int = None):
 @app.get("/events/road/{name_road}")
 def events_by_road_name(self=None, name_road: str = None):
     return EventByName.get(self, name_road)
+
+
+
+##### ENDPOINT FOR LOGGING #####
+# @app.get("/logs1")
+# def logs():
+#     result = subprocess.run(["python", "-m", "uvicorn", "api.main:app", "--reload"], capture_output=True)
+#     return result.stdout.decode()
+#
+# @app.get("/logs")
+# def logs():
+#     p = subprocess.Popen(["python", "-m", "uvicorn", "api.main:app", "--reload"], stdout=subprocess.PIPE, universal_newlines=True)
+#     for line in p.stdout:
+#         yield line

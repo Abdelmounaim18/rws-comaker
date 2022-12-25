@@ -32,13 +32,10 @@ class RoadModel:
             :param road_list
         """
 
-        try:
-            # the .format() method is used to format the string into a proper SQL statement using the given values as list.
-            DB.create(
-                'INSERT INTO Roads(road_name, last_updated, event_count ) VALUES{}'.format(
-                    ', '.join(map(str, road_list))))
-        except:
-            pass
+        # the .format() method is used to format the string into a proper SQL statement using the given values as list.
+        DB.create(
+            'INSERT IGNORE INTO Roads(road_name, last_updated, event_count ) VALUES{}'.format(
+                ', '.join(map(str, road_list))))
 
     def json(self):
         """Returns a JSON version of the current object

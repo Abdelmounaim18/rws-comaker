@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS RWS_DB.LaneLocations
     `km`           TEXT  NOT NULL,
     `lane`         TEXT  NOT NULL,
     `carriage_way` TEXT NOT NULL,
-    `uuid`         TEXT NOT NULL UNIQUE,
+    `uuid`         TEXT NOT NULL,
     PRIMARY KEY (`id`)
 
 );
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS RWS_DB.Events
     `avg_speed`  TEXT     NOT NULL,
     `flow_count` TEXT     NOT NULL,
     `ts_event`   TEXT     NOT NULL,
-    `uuid`       TEXT     NOT NULL UNIQUE,
+    `uuid`       TEXT     NOT NULL,
     PRIMARY KEY (`id`)
 
 );
