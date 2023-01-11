@@ -36,9 +36,9 @@
         "x": 0,
         "y": 0
       },
-      "id": 29,
+      "id": 27,
       "panels": [],
-      "title": "Overview",
+      "title": "Road details",
       "type": "row"
     },
     {
@@ -52,6 +52,729 @@
         "x": 0,
         "y": 1
       },
+      "id": 32,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "\n\n<h1 style=\"text-align: center\"><b>${Road}</b></h1>",
+        "mode": "html"
+      },
+      "pluginVersion": "9.2.2",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Current Speed",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 60
+              },
+              {
+                "color": "yellow",
+                "value": 105
+              },
+              {
+                "color": "orange",
+                "value": 120
+              },
+              {
+                "color": "red",
+                "value": 135
+              }
+            ]
+          },
+          "unit": "velocitykmh"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 3
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "icon": "tachometer-alt",
+        "iconPosition": "content",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "auto"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.0.[*].road_name",
+              "type": "string"
+            },
+            {
+              "jsonPath": "$.0.[*].avg_speed",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.0.[*].ts_event",
+              "language": "jsonpath",
+              "name": "",
+              "type": "time"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/events/road/${Road}"
+        }
+      ],
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 3
+      },
+      "id": 40,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "icon": "car-alt",
+        "iconPosition": "content",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "auto"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.0.[*].road_name",
+              "type": "string"
+            },
+            {
+              "jsonPath": "$.0.[*].flow_count",
+              "language": "jsonpath",
+              "name": "Cars",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.0.[*].ts_event",
+              "language": "jsonpath",
+              "name": "",
+              "type": "time"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/events/road/${Road}"
+        }
+      ],
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-blues"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "lengthkm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 3
+      },
+      "id": 46,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "icon": "road",
+        "iconPosition": "content",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "max"
+          ],
+          "fields": "/^km$/",
+          "values": false
+        },
+        "subtitle": "Road Length",
+        "suffix": "",
+        "textMode": "auto"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.[*].road_name",
+              "type": "string"
+            },
+            {
+              "jsonPath": "$.[*].km",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/lanelocations/${Road}"
+        }
+      ],
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "left",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "stepAfter",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 11
+      },
+      "id": 15,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean",
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.2.2",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.0.[*].ts_event",
+              "language": "jsonpath",
+              "name": "Timestamp",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.0.[*].avg_speed",
+              "language": "jsonpath",
+              "name": "Speed",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.0.[*].flow_count",
+              "language": "jsonpath",
+              "name": "Flow",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/events/road/${Road}"
+        }
+      ],
+      "title": "Events",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "Cars"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Speed  "
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "velocitykmh"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 11
+      },
+      "id": 36,
+      "options": {
+        "displayMode": "basic",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": false
+      },
+      "pluginVersion": "9.2.2",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.0.[*].flow_count",
+              "name": " ",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.0.[*].ts_event",
+              "language": "jsonpath",
+              "name": "Timestamp",
+              "type": "time"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Average Flow",
+          "urlPath": "/events/road/${Road}"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.0.[*].avg_speed",
+              "name": " ",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.0.[*].ts_event",
+              "language": "jsonpath",
+              "name": "Timestamp",
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Average Speed",
+          "urlPath": "/events/road/${Road}"
+        }
+      ],
+      "transformations": [],
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto",
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "km"
+            },
+            "properties": [
+              {
+                "id": "custom.displayMode",
+                "value": "lcd-gauge"
+              },
+              {
+                "id": "unit",
+                "value": "lengthkm"
+              },
+              {
+                "id": "custom.inspect",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 19
+      },
+      "id": 38,
+      "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "carriage_way (last)"
+          }
+        ]
+      },
+      "pluginVersion": "9.2.2",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.[*].road_name",
+              "type": "string"
+            },
+            {
+              "jsonPath": "$.[*].carriage_way",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            },
+            {
+              "jsonPath": "$.[*].lane",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            },
+            {
+              "jsonPath": "$.[*].km",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.[*].uuid",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/lanelocations/${Road}/lane/${Lane}"
+        }
+      ],
+      "title": "Avg per lane",
+      "transformations": [
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "A carriage_way": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "A km": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "A lane": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "A road_name": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "A uuid": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "B avg_speed": {
+                "aggregations": [
+                  "mean"
+                ]
+              },
+              "B uuid": {
+                "aggregations": []
+              },
+              "carriage_way": {
+                "aggregations": [
+                  "last"
+                ],
+                "operation": "aggregate"
+              },
+              "km": {
+                "aggregations": [
+                  "last"
+                ],
+                "operation": "groupby"
+              },
+              "lane": {
+                "aggregations": [
+                  "last"
+                ],
+                "operation": "aggregate"
+              },
+              "road_name": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "uuid": {
+                "aggregations": []
+              }
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 44,
+      "panels": [],
+      "title": "Stats",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 28
+      },
       "id": 25,
       "options": {
         "code": {
@@ -59,7 +782,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "\n\n<h1 style=\"text-align: center\"><b>Overview</b></h1>",
+        "content": "\n\n<h1 style=\"text-align: center\"><b>Stats</b></h1>",
         "mode": "html"
       },
       "pluginVersion": "9.2.2",
@@ -144,7 +867,7 @@
         "h": 12,
         "w": 12,
         "x": 0,
-        "y": 3
+        "y": 30
       },
       "id": 34,
       "options": {
@@ -263,7 +986,7 @@
         "h": 12,
         "w": 12,
         "x": 12,
-        "y": 3
+        "y": 30
       },
       "id": 35,
       "options": {
@@ -275,7 +998,7 @@
             "lastNotNull"
           ],
           "displayMode": "table",
-          "placement": "right",
+          "placement": "bottom",
           "showLegend": true
         },
         "tooltip": {
@@ -388,11 +1111,102 @@
       },
       "fieldConfig": {
         "defaults": {
-          "custom": {
-            "align": "center",
-            "displayMode": "auto",
-            "inspect": false
+          "color": {
+            "mode": "continuous-greens"
           },
+          "displayName": "Events",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 60
+              },
+              {
+                "color": "yellow",
+                "value": 105
+              },
+              {
+                "color": "orange",
+                "value": 120
+              },
+              {
+                "color": "red",
+                "value": 135
+              }
+            ]
+          },
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 7,
+        "x": 0,
+        "y": 42
+      },
+      "id": 42,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "icon": "database",
+        "iconPosition": "content",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "count"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "auto"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.[*].road_name",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/events"
+        }
+      ],
+      "transformations": [],
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-purples"
+          },
+          "displayName": "Total Cars on All Roads",
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -411,24 +1225,32 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 24,
-        "x": 0,
-        "y": 15
+        "h": 8,
+        "w": 8,
+        "x": 7,
+        "y": 42
       },
-      "id": 22,
+      "id": 13,
       "options": {
-        "footer": {
-          "fields": "",
-          "reducer": [
+        "colorMode": "value",
+        "graphMode": "trend",
+        "icon": "car-alt",
+        "iconPosition": "content",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
             "sum"
           ],
-          "show": false
+          "fields": "",
+          "values": false
         },
-        "frameIndex": 0,
-        "showHeader": true
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "auto"
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "1.2.3",
       "targets": [
         {
           "cacheDurationSeconds": 300,
@@ -438,124 +1260,26 @@
           },
           "fields": [
             {
-              "jsonPath": "$.[*].road_name",
-              "language": "jsonpath",
-              "name": "Road",
-              "type": "string"
-            },
-            {
-              "jsonPath": "$.[*].km",
-              "language": "jsonpath",
-              "name": "KM",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.[*].lane",
-              "language": "jsonpath",
-              "name": "Lane",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.[*].carriage_way",
-              "language": "jsonpath",
-              "name": "Carriage way",
-              "type": "string"
-            },
-            {
-              "jsonPath": "$.[*].uuid",
-              "language": "jsonpath",
-              "name": "UUID",
-              "type": "string"
-            }
-          ],
-          "key": "Q-25ab038d-423b-490b-ace3-7047df7d74fa-0",
-          "method": "GET",
-          "queryParams": "",
-          "refId": "Lane Locations",
-          "urlPath": "/lanelocations"
-        },
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "SDYvGUH4z"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.[*].road_name",
-              "name": "Road",
-              "type": "string"
-            },
-            {
-              "jsonPath": "$.[*].avg_speed",
-              "language": "jsonpath",
-              "name": "Avg Speed",
-              "type": "number"
-            },
-            {
               "jsonPath": "$.[*].flow_count",
               "language": "jsonpath",
-              "name": "Flow Count",
+              "name": "Cars",
               "type": "number"
             },
             {
               "jsonPath": "$.[*].ts_event",
               "language": "jsonpath",
-              "name": "Timestamp",
+              "name": "",
               "type": "time"
-            },
-            {
-              "jsonPath": "$.[*].uuid",
-              "language": "jsonpath",
-              "name": "UUID",
-              "type": "string"
             }
           ],
-          "hide": false,
           "method": "GET",
           "queryParams": "",
-          "refId": "Events",
+          "refId": "A",
           "urlPath": "/events"
         }
       ],
-      "type": "table"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 25
-      },
-      "id": 27,
-      "panels": [],
-      "title": "Road details",
-      "type": "row"
-    },
-    {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "SDYvGUH4z"
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 24,
-        "x": 0,
-        "y": 26
-      },
-      "id": 32,
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "\n\n<h1 style=\"text-align: center\"><b>${Road}</b></h1>",
-        "mode": "html"
-      },
-      "pluginVersion": "9.2.2",
-      "type": "text"
+      "title": "(2019 > Now)",
+      "type": "orchestracities-iconstat-panel"
     },
     {
       "datasource": {
@@ -565,249 +1289,49 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
+            "mode": "continuous-blues"
           },
-          "displayName": "Current Speed",
+          "displayName": "Total Cars on ${Road}",
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
-                "value": null
-              },
-              {
                 "color": "green",
-                "value": 60
-              },
-              {
-                "color": "yellow",
-                "value": 105
-              },
-              {
-                "color": "orange",
-                "value": 120
-              },
-              {
-                "color": "red",
-                "value": 135
+                "value": null
               }
             ]
-          },
-          "unit": "velocitykmh"
+          }
         },
         "overrides": []
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 28
+        "w": 9,
+        "x": 15,
+        "y": 42
       },
-      "id": 12,
+      "id": 45,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "value_and_name"
-      },
-      "pluginVersion": "9.2.2",
-      "targets": [
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "SDYvGUH4z"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.0.[*].road_name",
-              "type": "string"
-            },
-            {
-              "jsonPath": "$.0.[*].avg_speed",
-              "language": "jsonpath",
-              "name": "",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.0.[*].ts_event",
-              "language": "jsonpath",
-              "name": "",
-              "type": "time"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "A",
-          "urlPath": "/events/road/${Road}"
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "SDYvGUH4z"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "continuous-GrYlRd"
-          },
-          "displayName": "Traffic Flow",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "red",
-                "value": null
-              },
-              {
-                "color": "green",
-                "value": 60
-              },
-              {
-                "color": "yellow",
-                "value": 105
-              },
-              {
-                "color": "orange",
-                "value": 120
-              },
-              {
-                "color": "red",
-                "value": 135
-              }
-            ]
-          },
-          "unit": "Cars"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 28
-      },
-      "id": 13,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "value_and_name"
-      },
-      "pluginVersion": "9.2.2",
-      "targets": [
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "SDYvGUH4z"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.0.[*].road_name",
-              "type": "string"
-            },
-            {
-              "jsonPath": "$.0.[*].flow_count",
-              "language": "jsonpath",
-              "name": "",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.0.[*].ts_event",
-              "language": "jsonpath",
-              "name": "",
-              "type": "time"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "A",
-          "urlPath": "/events/road/${Road}"
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "SDYvGUH4z"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "mappings": [],
-          "max": 140,
-          "min": 0,
-          "thresholds": {
-            "mode": "percentage",
-            "steps": [
-              {
-                "color": "red",
-                "value": null
-              },
-              {
-                "color": "green",
-                "value": 40
-              },
-              {
-                "color": "yellow",
-                "value": 75
-              },
-              {
-                "color": "orange",
-                "value": 80
-              },
-              {
-                "color": "red",
-                "value": 85
-              }
-            ]
-          },
-          "unit": "velocitykmh"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 36
-      },
-      "id": 21,
-      "options": {
+        "graphMode": "trend",
+        "icon": "car-alt",
+        "iconPosition": "content",
+        "justifyMode": "center",
         "orientation": "auto",
+        "prefix": "",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "sum"
           ],
           "fields": "",
           "values": false
         },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "auto"
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "1.2.3",
       "targets": [
         {
           "cacheDurationSeconds": 300,
@@ -817,14 +1341,16 @@
           },
           "fields": [
             {
-              "jsonPath": "$.0.[*].avg_speed",
+              "jsonPath": "$.0.[*].flow_count",
+              "language": "jsonpath",
+              "name": "Cars",
               "type": "number"
             },
             {
-              "jsonPath": "$.0.[*].road_name",
+              "jsonPath": "$.0.[*].ts_event",
               "language": "jsonpath",
               "name": "",
-              "type": "string"
+              "type": "time"
             }
           ],
           "method": "GET",
@@ -833,8 +1359,8 @@
           "urlPath": "/events/road/${Road}"
         }
       ],
-      "title": "Average speed",
-      "type": "gauge"
+      "title": "(2019 > Now)",
+      "type": "orchestracities-iconstat-panel"
     },
     {
       "datasource": {
@@ -847,53 +1373,62 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 50,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "red",
                 "value": null
               },
               {
+                "color": "green",
+                "value": 60
+              },
+              {
+                "color": "yellow",
+                "value": 105
+              },
+              {
                 "color": "orange",
-                "value": 25
+                "value": 120
               },
               {
                 "color": "red",
-                "value": 40
+                "value": 135
               }
             ]
           },
-          "unit": "Cars"
+          "unit": "velocitykmh"
         },
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 6,
         "w": 12,
-        "x": 12,
-        "y": 36
+        "x": 0,
+        "y": 50
       },
-      "id": 36,
+      "id": 39,
       "options": {
-        "displayMode": "lcd",
-        "minVizHeight": 10,
-        "minVizWidth": 0,
+        "colorMode": "value",
+        "graphMode": "trend",
+        "icon": "tachometer-alt",
+        "iconPosition": "content",
+        "justifyMode": "auto",
         "orientation": "horizontal",
+        "prefix": "",
         "reduceOptions": {
           "calcs": [
             "mean"
           ],
-          "fields": "/^flow_count$/",
+          "fields": "",
           "values": false
         },
-        "showUnfilled": true,
-        "text": {
-          "valueSize": 50
-        }
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "auto"
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "1.2.3",
       "targets": [
         {
           "cacheDurationSeconds": 300,
@@ -903,25 +1438,111 @@
           },
           "fields": [
             {
-              "jsonPath": "$.0.[*].flow_count",
+              "jsonPath": "$.[*].avg_speed",
+              "language": "jsonpath",
+              "name": "",
               "type": "number"
             },
             {
-              "jsonPath": "$.0.[*].road_name",
+              "jsonPath": "$.[*].ts_event",
               "language": "jsonpath",
               "name": "",
-              "type": "string"
+              "type": "time"
             }
           ],
           "method": "GET",
           "queryParams": "",
           "refId": "A",
-          "urlPath": "/events/road/${Road}"
+          "urlPath": "/events"
         }
       ],
-      "title": "Average Flow",
-      "transformations": [],
-      "type": "bargauge"
+      "title": "Average Speed (All roads)",
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "SDYvGUH4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 50
+      },
+      "id": 41,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "trend",
+        "icon": "car-alt",
+        "iconPosition": "content",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "value"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "SDYvGUH4z"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.[*].flow_count",
+              "language": "jsonpath",
+              "name": "Cars",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.[*].ts_event",
+              "language": "jsonpath",
+              "name": "",
+              "type": "time"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/events"
+        }
+      ],
+      "title": "Average Amount of Cars (per road)",
+      "type": "orchestracities-iconstat-panel"
     },
     {
       "datasource": {
@@ -932,7 +1553,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 44
+        "y": 56
       },
       "id": 14,
       "options": {
@@ -988,147 +1609,6 @@
       ],
       "title": "Event Logs",
       "type": "logs"
-    },
-    {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "SDYvGUH4z"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "fillOpacity": 80,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineWidth": 1,
-            "scaleDistribution": {
-              "type": "linear"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Speed"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "semi-dark-green",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Flow"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "dark-blue",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 44
-      },
-      "id": 15,
-      "options": {
-        "barRadius": 0,
-        "barWidth": 0.97,
-        "groupWidth": 1,
-        "legend": {
-          "calcs": [
-            "last"
-          ],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "orientation": "auto",
-        "showValue": "auto",
-        "stacking": "none",
-        "tooltip": {
-          "mode": "multi",
-          "sort": "none"
-        },
-        "xTickLabelRotation": 0,
-        "xTickLabelSpacing": -100
-      },
-      "pluginVersion": "9.2.2",
-      "targets": [
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "SDYvGUH4z"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.0.[*].ts_event",
-              "language": "jsonpath",
-              "name": "Timestamp",
-              "type": "time"
-            },
-            {
-              "jsonPath": "$.0.[*].avg_speed",
-              "language": "jsonpath",
-              "name": "Speed",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.0.[*].flow_count",
-              "language": "jsonpath",
-              "name": "Flow",
-              "type": "number"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "A",
-          "urlPath": "/events/road/${Road}"
-        }
-      ],
-      "title": "Events",
-      "type": "barchart"
     }
   ],
   "refresh": "1m",
@@ -1139,9 +1619,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "text": "A27",
-          "value": "A27"
+          "selected": false,
+          "text": "A16",
+          "value": "A16"
         },
         "datasource": {
           "type": "marcusolsson-json-datasource",
@@ -1175,8 +1655,12 @@
       {
         "current": {
           "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "text": [
+            "All"
+          ],
+          "value": [
+            "All"
+          ]
         },
         "datasource": {
           "type": "marcusolsson-json-datasource",
@@ -1185,7 +1669,7 @@
         "definition": "$.[*].carriage_way",
         "hide": 0,
         "includeAll": true,
-        "multi": false,
+        "multi": true,
         "name": "CarriageWay",
         "options": [],
         "query": {
@@ -1209,26 +1693,8 @@
         "allValue": "",
         "current": {
           "selected": false,
-          "text": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "9"
-          ],
-          "value": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "9"
-          ]
+          "text": "1",
+          "value": "1"
         },
         "datasource": {
           "type": "marcusolsson-json-datasource",
@@ -1237,14 +1703,15 @@
         "definition": "$.[*].lane",
         "hide": 0,
         "includeAll": false,
-        "multi": true,
+        "multi": false,
         "name": "Lane",
         "options": [],
         "query": {
           "cacheDurationSeconds": 300,
           "fields": [
             {
-              "jsonPath": "$.[*].lane"
+              "jsonPath": "$.[*].lane",
+              "type": "number"
             }
           ],
           "method": "GET",
@@ -1260,13 +1727,13 @@
     ]
   },
   "time": {
-    "from": "2022-12-05T21:41:50.562Z",
-    "to": "2022-12-05T21:42:23.895Z"
+    "from": "now-3h",
+    "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Rijkswaterstaat",
   "uid": "iWQLNgO4k",
-  "version": 51,
+  "version": 97,
   "weekStart": "monday"
 }

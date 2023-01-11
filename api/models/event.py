@@ -93,4 +93,4 @@ def json(self):
     return self.__dict__
 
 
-EventModel.find_all()
+# EventModel.find_all()

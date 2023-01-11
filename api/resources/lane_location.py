@@ -12,7 +12,7 @@ class DBAddLaneLocations:
 
         lane_location_list = []
 
-        with open('../refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
 
         # appending all lanelocations to a list
@@ -31,4 +31,4 @@ class DBAddLaneLocations:
         LaneLocationModel.insert_data(lane_location_list)
 
 
-DBAddLaneLocations.add_all_lanelocations()
+# DBAddLaneLocations.add_all_lanelocations()

@@ -19,7 +19,7 @@ class DBAddRoads:
         """
         road_list = []
 
-        with open('../refactored_ndw_data.json') as json_file:
+        with open('./refactored_ndw_data.json') as json_file:
             combined_events = json.load(json_file)
         # querying event count for each road
         count = DB.select_all(
@@ -47,4 +47,4 @@ class DBAddRoads:
         RoadModel.insert_data(road_list)
 
 
-DBAddRoads.add_all_roads()
+# DBAddRoads.add_all_roads()
