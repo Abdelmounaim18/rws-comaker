@@ -6,7 +6,7 @@ The dashboard to monitor all the roads in NL.
 ## Requirements
 
 _TLDR;_
-_You can also run this project locally in case the docker deployment is not working properly (see last step)._
+_You can also run this project locally in case the docker deployment is not working properly (see last [step](#Running-locally))._
 
 This project requires you to have docker pre-intsalled and running on the latest version.
 To check if docker is installed run this command in your terminal
@@ -154,4 +154,43 @@ Step 2: \
 Open the __Dashboards tab > settings icon > JSON Model__ and import the dashboard from the ```./dashboard/grafana.json``` file. \
 You should now be able to see the dashboard!
 >![grafana_dashboard.png](./dashboard/rws-dashboard.png)
+
+
+## Running locally
+
+If you want to run this project locally, you can do so by following these steps:
+
+Step 1: \
+Unzip and open directory
+
+```bash
+   unzip RWS_Datalab_Dashboard.zip
+   open RWS_Datalab_Dashboard
+```
+
+Step 2: \
+Install the required packages
+
+```bash
+   pip install -r requirements.txt
+```
+
+Step 3: \
+Run the application in the working directory
+
+```bash
+   uvicorn api.main:app --reload --port 8000
+```
+
+Step 4: \
+Head over to http://localhost:8000/docs to access the API
+ ```bash
+  INFO:     Will watch for changes in these directories: ['/path/to/project/rws-comaker']
+  INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+  INFO:     Started reloader process [29514] using WatchFiles
+  INFO:     Started server process [29530]
+  INFO:     Waiting for application startup.
+  INFO:     Application startup complete.
+```
+
 
