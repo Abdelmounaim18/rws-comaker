@@ -5,36 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e06e682-30a5-4e98-b6e4-38dfa92478d4" name="Changes" comment="semi-final version">
-      <change afterPath="$PROJECT_DIR$/installer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/json-api-settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/rws-dashboard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/db/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/db/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/utils/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/grafana.json" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/grafana.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/Road" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/diverging_diamond_interchange.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/examples/highway_onramp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/roundabout.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/test_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/tests/test_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/tests/test_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/curve.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/road.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/simulation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/traffic_signal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/vehicle.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/vehicle_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/trafficSimulator/window.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic-simulation-example/src/twoway_intersection.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,45 +61,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
-    "last_opened_file_path": "/Users/abdelmounaim/Developer/Rijkswaterstaat/rws-comaker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/abdelmounaim/Developer/Rijkswaterstaat/rws-comaker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MariaDB"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MariaDB&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/api/utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dashboard" />
       <recent name="$PROJECT_DIR$/api" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Database Script.LaneLocations.sql">
     <configuration name="LaneLocations.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="e8044de1-df49-44a1-afdb-68601a3a1d43/schema/RWS_DB/table/LaneLocations.sql" />
       <script-mode>FILE</script-mode>
@@ -271,7 +246,8 @@
       <workItem from="1671972171466" duration="95000" />
       <workItem from="1671972298318" duration="7916000" />
       <workItem from="1673448195317" duration="55000" />
-      <workItem from="1673448272902" duration="15646000" />
+      <workItem from="1673448272902" duration="16097000" />
+      <workItem from="1673522748322" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="added conn to mariaDB Server">
       <created>1668287143249</created>
@@ -357,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673438491855</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="semi-final version">
+      <created>1673522445616</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673522445616</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -148,11 +148,10 @@ With your Grafana instance open; head over to __Plugins__ and install [JSON API]
 
 Head over to the __Data Sources__ tab, add a new data source and select __JSON API__ as the type.
 In the __URL__ field, enter the following: ```http://[SERVER_IP]:[PORT]/```. 
->![plugin_settings.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Ft7%2Fx9vwhr8j2gvd_vsgmrp424zc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_atCTSf%2FScherm%C2%ADafbeelding%202023-01-12%20om%2011.47.12.png)
+>![plugin_settings.png](./dashboard/json-api-settings.png)
 
 Step 2: \
 Open the __Dashboards tab > settings icon > JSON Model__ and import the dashboard from the ```./dashboard/grafana.json``` file. \
 You should now be able to see the dashboard!
->![grafana_dashboard.png](..%2F..%2F..%2FDesktop%2FScherm%C2%ADafbeelding%202023-01-12%20om%2011.52.38.png)
-
+>![grafana_dashboard.png](./dashboard/rws-dashboard.png)
 
