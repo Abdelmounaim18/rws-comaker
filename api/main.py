@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 import logging
 import subprocess
@@ -30,6 +32,7 @@ def fetch_data():
 
 @app.get("/roads")
 def all_roads():
+    print(os.getenv('password_db'))
     return RoadModel.find_all()
 
 

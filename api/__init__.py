@@ -5,6 +5,4 @@ db_connection = {
     'password': 'rijkswaterstaat',
     'database': 'RWS_DB'
 }
-
-# 192.168.1.42
-# 53kPrsegTAznpYdi
+# Rijkswaterstaat2022

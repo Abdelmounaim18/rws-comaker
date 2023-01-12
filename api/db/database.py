@@ -1,7 +1,8 @@
+import os
+
 import mariadb
-import json
+
 from api import db_connection
-# from utils import db_connection
 
 
 class DB:

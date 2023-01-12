@@ -1,28 +1,11 @@
-FROM alpine:latest
+FROM python:3.9
 
-RUN apk add --no-cache python3-dev \
-    && apk update \
-    && apk add py-pip \
-    && apk add py3-wheel \
-    && apk add py3-pymysql \
-    && apk add mariadb-connector-c \
-    && apk add mysql \
-    && apk add mariadb-dev
+WORKDIR /
 
-RUN python3 -m pip install --upgrade pip
-RUN pip3 install --upgrade setuptools wheel
+COPY ./requirements.txt /code/requirements.txt
 
-WORKDIR /app
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY . /app
+COPY ./api /api
 
-RUN pip3 --no-cache-dir install -r requirements.txt
-
-
-EXPOSE 8000
-
-ENTRYPOINT  ["python3"]
-
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "5000"]

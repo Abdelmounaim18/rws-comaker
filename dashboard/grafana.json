@@ -486,7 +486,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Speed  "
+              "options": "Average Speed  "
             },
             "properties": [
               {
@@ -1120,8 +1120,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
-                "value": null
+                "color": "red"
               },
               {
                 "color": "green",
@@ -1212,8 +1211,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1297,8 +1295,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           }
@@ -1377,8 +1374,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
-                "value": null
+                "color": "red"
               },
               {
                 "color": "green",
@@ -1474,8 +1470,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1611,7 +1606,7 @@
       "type": "logs"
     }
   ],
-  "refresh": "1m",
+  "refresh": false,
   "schemaVersion": 37,
   "style": "dark",
   "tags": [],
@@ -1620,8 +1615,8 @@
       {
         "current": {
           "selected": false,
-          "text": "A16",
-          "value": "A16"
+          "text": "A1",
+          "value": "A1"
         },
         "datasource": {
           "type": "marcusolsson-json-datasource",
@@ -1655,12 +1650,8 @@
       {
         "current": {
           "selected": false,
-          "text": [
-            "All"
-          ],
-          "value": [
-            "All"
-          ]
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": {
           "type": "marcusolsson-json-datasource",
@@ -1727,13 +1718,13 @@
     ]
   },
   "time": {
-    "from": "now-3h",
-    "to": "now"
+    "from": "2019-10-02T08:38:10.569Z",
+    "to": "2023-01-10T11:39:02.785Z"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Rijkswaterstaat",
   "uid": "iWQLNgO4k",
-  "version": 97,
+  "version": 98,
   "weekStart": "monday"
 }
